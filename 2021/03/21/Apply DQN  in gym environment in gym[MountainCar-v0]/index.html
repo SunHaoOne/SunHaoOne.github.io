@@ -485,8 +485,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[toc]</p>
-<h3 id="一、Gym-Environment"><a href="#一、Gym-Environment" class="headerlink" title="一、Gym Environment"></a>一、Gym Environment</h3><blockquote>
+                <h3 id="一、Gym-Environment"><a href="#一、Gym-Environment" class="headerlink" title="一、Gym Environment"></a>一、Gym Environment</h3><blockquote>
 <p>首先启动环境，采取随机的动作后会返回几个变量，简单的代码过程如下：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">env = gym.make(<span class="string">&#x27;MountainCar-v1&#x27;</span>) <span class="comment"># 打开一个环境，这个环境是修改后的后面会讲</span></span><br><span class="line">env.reset() <span class="comment"># 重置环境</span></span><br><span class="line">action = env.action_space.sample() <span class="comment"># 从动作空间里随机采样一个动作</span></span><br><span class="line">state, reward, done, info = env.step(action) <span class="comment"># 采取动作后，获得了状态，奖励，是否完成和info额外信息。</span></span><br></pre></td></tr></table></figure>
@@ -879,29 +878,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/21/Apply%20DQN%20%20in%20gym%20environment%20in%20gym%5BMountainCar-v0%5D/">
+                <a href="/2021/03/21/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="Apply DQN  in gym environment in [MountainCar-v0]">
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="PCA特征值分解的两种推导">
                         
-                        <span class="card-title">Apply DQN  in gym environment in [MountainCar-v0]</span>
+                        <span class="card-title">PCA特征值分解的两种推导</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            传统的方法是通过确定的状态来更新Q-value，本实验将不同的`图片帧`作为状态，通过卷积神经网络输出一个Q-value，进一步再选择动作
+                            一种推导方式是通过方差最大化，另一种是通过距离最小化
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -914,7 +912,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -937,19 +934,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/21/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B/">
+                <a href="/2021/03/21/gym-carla%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="在无人驾驶平台Carla下，应用gym的语法实现强化学习">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">在无人驾驶平台Carla下，应用gym的语法实现强化学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            gym的框架语法简单便于学习，而Carla的编写比较复杂，应用该框架可以迅速上手
                         
                     </div>
                     <div class="publish-info">
@@ -958,11 +954,27 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>

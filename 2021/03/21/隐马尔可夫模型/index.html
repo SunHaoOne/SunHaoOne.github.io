@@ -1,0 +1,1631 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-21
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>[toc]</p>
+<h2 id="隐马尔可夫模型"><a href="#隐马尔可夫模型" class="headerlink" title="隐马尔可夫模型"></a>隐马尔可夫模型</h2><p>隐马尔可夫模型，（hidden Markov model）是可用于标注问题的统计学习模型，描述由隐藏的马尔可夫链随机生成观测序列的模型，属于生成模型。本章首先介绍隐马尔可夫模型的基本概念，然后分别叙述隐马尔可夫模型的概率计算方法，学习算法以及预测算法。隐马尔可夫模型再语音识别，自然语言处理，生物信息，模式识别等领域有着广泛的应用。</p>
+<h3 id="1-隐马尔可夫模型的基本概念"><a href="#1-隐马尔可夫模型的基本概念" class="headerlink" title="1.隐马尔可夫模型的基本概念"></a>1.隐马尔可夫模型的基本概念</h3><blockquote>
+<p>定义： 隐马尔可夫模型是关于<strong>时序</strong>的概率模型，描述由一个隐藏的马尔可夫链随机生成不可观测的状态随机序列，再由各个状态生成一个观测从而产生观测随机序列的过程。</p>
+</blockquote>
+<ul>
+<li>隐藏的马尔可夫链随机生成的状态的序列，称为<code>状态序列</code>。(state sequence)</li>
+<li>每个状态生成一个观测，由此产生的观测的随机序列，称为观测序列。( observation sequence)</li>
+<li>系列的每一个未知又可以看作是一个<code>时刻</code>。</li>
+</ul>
+<p>隐马尔可夫模型由<code>初始概率分布</code>，<code>状态转移概率分布</code>以及<code>观测概率分布</code>确定。隐马尔可夫模型的形式定义如下：</p>
+<ul>
+<li>$Q$是所有可能状态的集合，$V$是所有可能的观测的集合：<strong>所有可能的情况在这里</strong></li>
+</ul>
+<p>$$<br>Q={q_1,…q_N},V={v_1,…v_M}<br>$$</p>
+<ul>
+<li><p>$N$是可能的状态数，$M$是可能的观测数。</p>
+</li>
+<li><p>$I$是长度为$T$的状态序列，$O$是对应的观测序列。<strong>这里表示==当前==情况的状态和观测</strong><br>$$<br>I={i_1,…i_T},O={o_1,…o_T}<br>$$</p>
+</li>
+<li><p>$A$是==状态转移==概率矩阵：</p>
+</li>
+</ul>
+<p>$$<br>A=[a_{ij}]_{N\times N}<br>$$</p>
+<p>其中：<br>$$<br>a_{ij}=P(i_{t+1}=q_j|i_t=q_i),i=1,2,…,N;j=1,2,…,N<br>$$</p>
+<blockquote>
+<p><strong>$a_{ij}$是时刻$t$处于状态$q_i$的条件下在时刻$t+1$状态转移到状态$q_j$的概率。</strong></p>
+</blockquote>
+<ul>
+<li>$B$是==观测==概率矩阵：<br>$$<br>B=[b_j(K)]_{N \times M}<br>$$</li>
+</ul>
+<p>其中：<br>$$<br>b_{ij}=P(o_{t}=v_k|i_t=q_j),k=1,2,…,M;j=1,2,…,N<br>$$</p>
+<blockquote>
+<p><strong>$b_{ij}$是时刻$t$处于状态$q_j$的条件下生成观测$v_k$的概率。</strong></p>
+</blockquote>
+<ul>
+<li>$\pi$是==初始状态概率向量==</li>
+</ul>
+<p>$$<br>\pi=(\pi_i)<br>$$</p>
+<p>其中，<br>$$<br>\pi_i=P(i_1=q_1), \  i=1,2,…,N<br>$$</p>
+<blockquote>
+<p><strong>$\pi_{i}$是时刻$t=1$时处于状态$q_i$的概率。</strong></p>
+</blockquote>
+<p>隐马尔可夫模型由初始状态概况向量$\pi$、状态转移矩阵$A$和观测矩阵$B$决定。</p>
+<ul>
+<li>$\pi$和$A$决定<strong>状态序列</strong>；</li>
+<li>$B$决定<strong>观测序列</strong>；</li>
+</ul>
+<p>因此，隐马尔可夫模型可以用三元符号表示，称为隐马尔可夫模型的三要素，即<br>$$<br>\lambda=(A,B,\pi)<br>$$</p>
+<ul>
+<li><p>状态转移矩阵$A$和初始状态概率向量$\pi$确定了隐藏的马尔可夫链，生成<code>不可观测</code>的状态序列。</p>
+</li>
+<li><p>观测概率矩阵$B$确定了<code>如何从状态生成观测</code>，与状态序列综合确定了如何产生观测序列。</p>
+</li>
+</ul>
+<p>从定义可知，隐马尔可夫模型作了两个基本假设：</p>
+<p>(1) <strong>齐次马尔可夫决策</strong>，即假设隐藏的马尔可夫链在任意时刻$t$的状态==只依赖于前一时刻==的状态，与其他时刻$t$无关；</p>
+<p>(2)<strong>观测独立性假设</strong>，即假设任意时刻的观测只依赖于该时刻的马尔可夫链的状态，与其他观测及其状态无关；</p>
+<p>隐马尔可夫模型可以用于标注，这时状态对应着标记。<code>标注问题</code>是给定观测的序列==预测==其对应的<strong>标记序列</strong>。可以假设标注问题的数据是由隐马尔可夫模型生成的。这样就可以利用隐马尔可夫模型的学习和预测算法进行标注。</p>
+<p><strong>例1</strong>：盒子和球的模型，假设有$4$个盒子，每个盒子里都装有红色和白色两种颜色的球：</p>
+<table>
+<thead>
+<tr>
+<th align="center">盒子号</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">红球数</td>
+<td align="center">5</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">白球树</td>
+<td align="center">5</td>
+<td align="center">7</td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<p>按照下面的方法抽球，产生一个球的颜色的观测序列：</p>
+<ul>
+<li>开始，从$4$个盒子里以等概率随机选取$1$个盒子，从这个盒子里随机抽出$1$个球，记录其颜色后，放回；</li>
+<li>然后，从当前盒子随机转移到下一个盒子，规则是：如果当前的盒子是盒子$1$，那么下一个盒子一定是盒子$2$；如果当前是盒子$2$或$3$，那么分别以$0.4$和$0.6$的概率转移到左边或者右边的盒子；如果当前盒子是盒子$4$，那么各以0.5的概率停留在盒子4或者转移到盒子$3$；</li>
+<li>确定转移的盒子后，再从这个盒子里随机抽出$1$个球，记录其颜色，放回；</li>
+<li>如此下去，重复进行$5$次，得到一个球的颜色的观测序列：</li>
+</ul>
+<p>$$<br>O=(Red,Red,White,White,Red)<br>$$</p>
+<p>在这个过程中，观察者==只能观测到球的颜色的序列==，观测不到球是从哪个盒子取出的，即观测不到盒子的序列。</p>
+<p>在这个例子中有两个随机序列，一个是盒子的序列(状态序列)，一个是球的颜色(观测序列)。盒子的序列是隐藏的，只有后者球的颜色是可观测的。根据所给条件，可以确定状态集合，序列长度以及模型的三要素。</p>
+<p>盒子对应状态，状态的集合是：<br>$$<br>Q={Box1,Box2,Box3,Box4},N=4<br>$$</p>
+<p>球的颜色对应观测，观测的集合是：<br>$$<br>V={Red,White}，M=2<br>$$<br>状态序列和观测序列长度为$T=5$，重复进行了5次。</p>
+<p>初始的<strong>概率分布</strong>为，即随机从4个盒子里抽取一个：<br>$$<br>\pi=(0.25,0.25,0.25,0.25)^T<br>$$<br><strong>状态转移概率</strong>分布为，横向和纵向分别表示盒子1234，一共有16种转移的可能：<br>$$<br>\begin{aligned}<br>A=\begin{bmatrix}<br>0 &amp; 1 &amp; 0 &amp; 0 \<br>0.4 &amp; 0 &amp; 0.6 &amp; 0 \<br>0 &amp; 0.4 &amp; 0 &amp; 0.6 \<br>0 &amp; 0 &amp; 0.5 &amp; 0.5 \<br>\end{bmatrix}<br>\end{aligned}<br>$$<br><strong>观测概率</strong>分布为：<br>$$<br>\begin{aligned}<br>B=\begin{bmatrix}<br>0.5 &amp; 0.5 \<br>0.3 &amp; 0.7 \<br>0.6 &amp; 0.4 \<br>0.8 &amp; 0.2 \<br>\end{bmatrix}<br>\end{aligned}<br>$$</p>
+<h4 id="1-1-隐马尔可夫模型的三个基本问题"><a href="#1-1-隐马尔可夫模型的三个基本问题" class="headerlink" title="1.1 隐马尔可夫模型的三个基本问题"></a>1.1 隐马尔可夫模型的三个基本问题</h4><p>隐马尔可夫模型有三个基本问题：</p>
+<ul>
+<li><p>==概率计算问题==。给定模型$\lambda=(A,B,\pi)$和观测序列$O=(o_1,…,o_T)$，计算在模型$\lambda$下观测序列$O$出现的概率$P(O|\lambda)$。</p>
+</li>
+<li><p>==学习问题==。已知观测序列$O=(o_1,…,o_T)$，估计模型$\lambda=(A,B,\pi)$的参数，使得该模型下观测序列的$P(O|\lambda)$最大。即用极大似然估计的方法估计参数。</p>
+</li>
+<li><p>==预测问题==，也称为解码问题。已知模型$\lambda=(A,B,\pi)$和观测序列$O=(o_1,…,o_T)$，求对给定观测序列条件概率$P(O|\lambda)$最大的状态序列$I={i_1,…i_T}$。即给定观测序列，求最有可能的对应的状态序列。</p>
+<table>
+<thead>
+<tr>
+<th>基本问题</th>
+<th>已知</th>
+<th>决策变量</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>概率计算问题</td>
+<td>模型$\lambda$，观测序列$O$</td>
+<td>无</td>
+<td>计算出$P(O</td>
+</tr>
+<tr>
+<td>学习问题</td>
+<td>观测序列$O$</td>
+<td>模型$\lambda$的参数</td>
+<td>$max\ P(O</td>
+</tr>
+<tr>
+<td>预测问题</td>
+<td>模型$\lambda$，观测序列$O$</td>
+<td>状态序列$I$</td>
+<td>$max\ P(O</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">三要素</th>
+<th align="center">矩阵内元素的含义</th>
+<th>计算公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">状态转概率矩阵$A$</td>
+<td align="center">$a_{ij}$是时刻$t$处于状态$q_i$的条件下在时刻$t+1$状态转移到状态$q_j$的概率。</td>
+<td>$a_{ij}=P(i_{t+1}=q_j</td>
+</tr>
+<tr>
+<td align="center">观测概率矩阵$B$</td>
+<td align="center">$b_{ij}$是时刻$t$处于状态$q_j$的条件下生成观测$v_k$的概率。</td>
+<td>$b_{ij}=P(o_{t}=v_k</td>
+</tr>
+<tr>
+<td align="center">初始状态概率向量$\pi$</td>
+<td align="center">$\pi_{i}$是时刻$t=1$时处于状态$q_i$的概率。</td>
+<td>$\pi_i=P(i_1=q_1)$</td>
+</tr>
+</tbody></table>
+<h3 id="2-概率计算方法"><a href="#2-概率计算方法" class="headerlink" title="2.概率计算方法"></a>2.概率计算方法</h3><p>主要包括观测序列概率$P(O|\lambda)$的前向和后向算法。</p>
+<h4 id="2-1-直接计算法"><a href="#2-1-直接计算法" class="headerlink" title="2.1 直接计算法"></a>2.1 直接计算法</h4><p>状态序列$I=(i_1,i_2,…,i_T)$的概率是，从初始概率$\pi$出发，依次转移相乘直到最后一个状态：<br>$$<br>P(I|\lambda)=\pi_{i_1}a_{i_1i_2}a_{i_2i_3}…a_{i_{T-1}i_{T}}<br>$$<br>对固定的状态序列$I=(i_1,i_2,…,i_T)$，观测序列$$O=(o_1,o_2,…,o_T)$$的概率是：<br>$$<br>P(O|I,\lambda)=P(O_1|I_1,\lambda)P(O_2|I_2,\lambda)…P(O_T|I_T,\lambda)=b_{i_1}(o_1)b_{i_2}(o_2)…b_{i_T}(o_T)<br>$$</p>
+<blockquote>
+<p>$P(O|I,\lambda)$中$O$和$I$有关，是从某状态$I$下观测到状态$O$的概率，有$T$个。而$P(I|\lambda)$是状态之间的转移过程，有$T-1$个，只和下一个状态有关，表现为转移状态的乘积。</p>
+</blockquote>
+<p>$O$和$I$同时出现的联合概率为：<br>$$<br>\begin{aligned}<br>P(O,I|\lambda)&amp;=P(O|I,\lambda)P(I|\lambda) \<br>&amp;=\pi_{i_1}a_{i_1i_2}a_{i_2i_3}…a_{i_{T-1}i_{T}}\times b_{i_1}(o_1)b_{i_2}(o_2)…b_{i_T}(o_T) \<br>&amp;=\pi_{i_1}b_{i_1}(o_1)a_{i_1i_2}b_{i_2}(o_2)a_{i_2i_3}…a_{i_{T-1}i_{T}}b_{i_T}(o_T)<br>\end{aligned}<br>$$</p>
+<p>然后，对所有可能的状态序列$I$求和，得到观测序列$O$的概率$P(O|\lambda)$，即：<br>$$<br>\begin{aligned}<br>P(O,I|\lambda)&amp;=\sum_IP(O|I,\lambda)P(I|\lambda) \<br>&amp;=\sum_{i_1,…,i_T}\pi_{i_1}b_{i_1}(o_1)a_{i_1i_2}b_{i_2}(o_2)a_{i_2i_3}…a_{i_{T-1}i_{T}}b_{i_T}(o_T)<br>\end{aligned}<br>$$</p>
+<h4 id="2-2-前向算法"><a href="#2-2-前向算法" class="headerlink" title="2.2 前向算法"></a>2.2 前向算法</h4><blockquote>
+<p>前向概率：给定隐马尔可夫模型$\lambda$，定义到时刻$t$部分观测序列为$o_1,…,o_t$且状态为$q_i$的概率为前向概率，即为</p>
+</blockquote>
+<p>$$<br>\alpha_i=P(o_1,o_2,…,o_t,i_t=q_i|\lambda)<br>$$</p>
+<p>可以递推地求得前向概率$\alpha_t(i)$及观测序列$P(O|\lambda)$。</p>
+<p>算法：<strong>观测序列的前向算法</strong></p>
+<p><strong>输入</strong>：隐马尔可夫模型$\lambda$，观测序列$O$;</p>
+<p><strong>输出</strong>：观测序列概率$P(O|\lambda)$</p>
+<p>(1)<strong>初值</strong>，表示初始时刻的状态$i_1=q_i$和观测$o_1$的联合概率<br>$$<br>\alpha_1(i)=\pi_ib_i(o_i)<br>$$<br>(2)<strong>递推</strong>，对$t=1,2,…,T-1$，计算到时刻$t+1$部分观测序列为$o_1,o_2,…,o_t,o_{t+1}$且在时刻$t+1$处于状态$q_i$的前向概率。</p>
+<ul>
+<li>$\alpha_t(j)$是到时刻$t$观察到$o_1,…,o_t$并在时刻$t$处于状态$q_j$的前向概率</li>
+<li>$\alpha_t(j)a_{ji}$是到时刻$t$观察到$o_1,…,o_t$并在时刻$t$处于状态$q_j$的前向概率而在时刻$t+1$到达状态$q_i$的联合概率</li>
+<li>$\sum_{j=1}^N\alpha_t(j)a_{ji}]b_i(o_{t+1})$即时刻$t+1$观测到$o_1,…,o_{t+1}$并在时刻$t+1$处于状态$q_i$的前向概率$\alpha_{t+1}(i)$</li>
+</ul>
+<p>$$<br>\begin{aligned}<br>\alpha_{t+1}&amp;=[\sum_{j=1}^N\alpha_t(j)a_{ji}]b_i(o_{t+1}) \<br>&amp;=[\alpha_t(1)a_{1i}+\alpha_t(2)a_{2i}+…+\alpha_t(N)a_{Ni}]b_i(o_{t+1}) \<br>\end{aligned}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">   </span><br><span class="line">    state 递推公式 &#123;</span><br><span class="line">        q1 --&gt; qi :a1i</span><br><span class="line">        q2 --&gt; qi :a2i</span><br><span class="line">        q3 --&gt; qi :a3i</span><br><span class="line">        ... --&gt; qi :axi</span><br><span class="line">        qN --&gt; qi :aNi   </span><br><span class="line">        </span><br><span class="line">        alpha_t(j) --&gt; alpha_t+1(i)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3)<strong>终止</strong><br>$$<br>P(O|\lambda)=\sum_{i=1}^N\alpha_T(i)<br>$$</p>
+<p><strong>例2</strong> 考虑盒子和球模型$\lambda=(A,B,\pi)$，状态集合$Q={1,2,3}$，观测集合$V={Red,White}$<br>$$<br>\begin{aligned}<br>A=\begin{bmatrix}<br>0.5 &amp; 0.2 &amp; 0.3 \<br>0.3 &amp; 0.5 &amp; 0.2 \<br>0.2 &amp; 0.3 &amp; 0.5 \<br>\end{bmatrix},<br>B=\begin{bmatrix}<br>0.5 &amp; 0.5 \<br>0.4 &amp; 0.6 \<br>0.7 &amp; 0.3 \<br>\end{bmatrix},<br>\pi=\begin{bmatrix}<br>0.2 \<br>0.4 \<br>0.4 \<br>\end{bmatrix}<br>\end{aligned}<br>$$<br>设$T=3$，$O=(Red,White,White)$，试用前向算法计算$P(O|\lambda)$</p>
+<blockquote>
+<p>简单理解一下这三个矩阵的含义，$A$表示转移概率，一共有三个状态，因此分别对应三个状态转移到三个状态的概率，因此一共有9种可能，$B$矩阵表示观测概率，一共有两个观测状态，白球和红球，也就是每一行表示从当前状态$1$下，观测到红球和白球的概率分别为$0.5和0.5$，一共有三个状态，因此共有6个元素，而$\pi$表示状态概率向量，分别表示处于状态$1,2,3$的概率，共有3个元素。</p>
+</blockquote>
+<p>(1)计算初值<br>$$<br>\alpha_1(1)=\pi_1b_1(o_1)=0.2 \times 0.5=0.1 \<br>\alpha_1(2)=\pi_2b_2(o_1)=0.4 \times 0.4=0.16 \<br>\alpha_1(3)=\pi_3b_3(o_1)=0.4 \times 0.7=0.28 \（2）<br>$$<br>(2)递推计算<br>$$<br>\alpha_2(1)=[\sum_{i=1}^3\alpha_1(i)a_{i1}]b_1(o_{2})=0.1\times 0.5+0.16\times 0.3+0.28\times 0.2=0.154\times 0.5=0.077 \<br>\alpha_2(2)=[\sum_{i=1}^3\alpha_1(i)a_{i1}]b_1(o_{2}) =0.1104\<br>\alpha_2(3)=[\sum_{i=1}^3\alpha_1(i)a_{i1}]b_1(o_{2})=0.0606 \<br>\alpha_3(1)=[\sum_{i=1}^3\alpha_2(i)a_{i1}]b_1(o_{3})=0.04187 \<br>\alpha_3(2)=[\sum_{i=1}^3\alpha_2(i)a_{i1}]b_1(o_{3}) =0.03551\<br>\alpha_3(3)=[\sum_{i=1}^3\alpha_2(i)a_{i1}]b_1(o_{3})=0.05284 \<br>$$<br>(3)终止<br>$$<br>P(O|\lambda)=\sum_{i=1}^3\alpha_3(i)=0.13022<br>$$</p>
+<h4 id="2-3-后向算法（略）"><a href="#2-3-后向算法（略）" class="headerlink" title="2.3 后向算法（略）"></a>2.3 后向算法（略）</h4><h4 id="2-4-一些概率和期望的计算（略）"><a href="#2-4-一些概率和期望的计算（略）" class="headerlink" title="2.4 一些概率和期望的计算（略）"></a>2.4 一些概率和期望的计算（略）</h4><h3 id="3-学习算法（略）"><a href="#3-学习算法（略）" class="headerlink" title="3. 学习算法（略）"></a>3. 学习算法（略）</h3><p>隐马尔可夫模型的学习，根据训练数据是包括观测序列和对应的状态序列还是只有观测序列，可以分为由监督学习与无监督学习实现。首先介绍监督学习算法，然后介绍无监督学习算法。</p>
+<h3 id="4-强化学习"><a href="#4-强化学习" class="headerlink" title="4 强化学习"></a>4 强化学习</h3><h4 id="4-1-强化学习问题"><a href="#4-1-强化学习问题" class="headerlink" title="4.1 强化学习问题"></a>4.1 强化学习问题</h4><h5 id="4-1-1-典型例子"><a href="#4-1-1-典型例子" class="headerlink" title="4.1.1 典型例子"></a>4.1.1 典型例子</h5><ul>
+<li>K臂赌博机问题 </li>
+<li>悬崖行走问题</li>
+</ul>
+<h5 id="4-1-2-强化学习的定义"><a href="#4-1-2-强化学习的定义" class="headerlink" title="4.1.2 强化学习的定义"></a>4.1.2 强化学习的定义</h5><p>在强化学习中，有两个可以交互的对象：<strong>智能体</strong>和<strong>环境</strong></p>
+<p>(1)<code>智能体</code>可以感知外界环境的<code>状态</code>和反馈的<code>奖励</code>，并进行学习和决策。智能体的<code>决策</code>功能是根据外界环境的状态来做出不同的<code>动作</code>，而<code>学习</code>功能是根据外界环境的奖励来调整策略。</p>
+<p>(2)<code>环境</code>是智能体外部的所有事物，并受智能体动作的影响而改变其状态，并反馈给智能体相应的奖励。</p>
+<p><strong>强化学习的基本要素</strong>包括：</p>
+<p>(1)<code>状态</code>$s$是对环境的描述，可以是离散的或连续的，其状态空间为$S$</p>
+<p>(2)<code>动作</code>$a$是对智能体行为的描述，可以是离散的或连续的，其动作空间为$A$</p>
+<p>(3)<code>策略</code>$\pi(a|s)$是智能体根据环境状态$s$来决定下一步动作$a$的函数</p>
+<p>(4)<code>状态转移概率</code>$p(s’|s,a)$是在智能体根据当前状态$s$做出一个动作$a$之后，环境在下一个时刻转变为状态$s’$的概率</p>
+<p>(5)<code>即时奖励</code>$r(s,a,s’)$是一个标量函数，即智能体根据当前的状态$s$做出动作$a$之后，环境会反馈给智能体一个奖励，这个奖励也经常和下一个时刻的状态$s$</p>
+<p><strong>策略</strong></p>
+<p>智能体的策略就是智能体如何根据环境状态$s$来决定下一步的动作$a$，通常可以分为<code>确定性策略</code>和<code>随机性策略</code>。</p>
+<ul>
+<li><code>确定性策略</code>是从状态空间到动作空间的映射函数$\pi:S \rightarrow A$。</li>
+<li><code>随机性策略</code>表示在给定环境状态时，智能体选择某个动作的概率分布.</li>
+</ul>
+<p>$$<br>\pi(a|s)=p(a|s) \<br>\sum_{a\in A}\pi(a|s)=1<br>$$</p>
+<p>通常情况下，强化学习一般试用<code>随机性策略</code>。随机性策略可以有很多优点：</p>
+<ul>
+<li>在学习时可以通过引入一定随机性更好的<code>探索</code>环境</li>
+<li>随机性策略的动作具有多样性，这一点在多个智能体博弈时也非常重要。采用确定性策略的之恩那个提总是对同样的环境做出相同的动作，会导致它的策略很容易被对手预测.</li>
+</ul>
+<h5 id="4-1-3-马尔可夫决策过程"><a href="#4-1-3-马尔可夫决策过程" class="headerlink" title="4.1.3 马尔可夫决策过程"></a>4.1.3 马尔可夫决策过程</h5><p>为简单起见，我们将智能体与环境的交互看作离散的时间序列。智能体从感知到的初始环境$s_0$开始，然后决定做一个相应的动作$a_0$，环境相应地发生改变到新的状态$s_1$，并反馈给智能体一个即时奖励$r_1$，然后智能体又根据状态$s_1$做一个动作$a_1$，环境相应改变为$s_2$，并反馈奖励$r_2$，这样的交互可以一直进行下去。<br>$$<br>s_0,a_0,s_1,r_1,a_1,s_2,r_2…s_{t-1},r_{t-1},a_{t-1},s_t,r_t…,<br>$$<br>其中$r_t=r(s_{t-1},a_{t-1},s_t)$是第$t$时刻的即时奖励。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">   </span><br><span class="line">    state 智能体与环境的交互 &#123;</span><br><span class="line">        智能体 --&gt; 环境 :动作a(t)</span><br><span class="line">        环境 --&gt; 智能体 :状态s(t)</span><br><span class="line">        环境 --&gt; 智能体 :奖励r(t+1)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>智能体与环境的交互过程可以看作一个马尔可夫决策过程，Markov Decision Process，MDP</p>
+<p>马尔可夫过程是一组具有马尔可夫性质的随机变量序列$s_0,s_1,…s_t \in S$，其中下一个时刻的状态$s_{t+1}$只取决于当前的状态$s_t$，<br>$$<br>p(s_{t+1}|s_t,…s_0)=p(s_{t+1}|s_t)<br>$$<br>其中$p(s_{t+1}|s_t)$称为<code>状态转移概率</code>$\sum_{}p(s_{t+1}|s_t)=1,s_{t+1}\in S$，也就是前文的$A$矩阵。</p>
+<p>马尔可夫决策过程在马尔可夫过程加入一个额外的变量：<code>动作</code>$a$，下一个时刻的状态$s_{t+1}$不但和当前时刻的状态$s_t$相关，而且和动作$a_t$相关，<br>$$<br>p()p(s_{t+1}|s_t,a_t…s_0,a_0)=p(s_{t+1}|s_t,a_t)<br>$$<br>其中$p(s_{t+1}|s_t,a_t)$称为状态转移概率。</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210120195508951.png" alt="image-20210120195508951"></p>
+<p>直观的理解，下一个时刻的状态不仅由上一个时刻的状态有关，还和上一个时刻产生的动作有关。</p>
+<p>给定策略$\pi(a|s)$，马尔可夫决策过程的一个<code>轨迹</code>（Trajectory）<br>$$<br>\tau=s_0,a_0,s_1,r_1,a_1,…s_{T-1},a_{T-1},s_{T},r_{T}<br>$$<br>的概率为：</p>
+<blockquote>
+<p>如果将第一个状态拿出来，那么依次都是<strong>动作</strong>，<strong>新状态</strong>，<strong>奖励</strong>…依次到最后一个是<strong>动作</strong>，<strong>最终状态</strong>，<strong>奖励</strong>。</p>
+<p>如果再写出来一项，第一个为起始的状态$s_0$，然后是在状态$s_1$下选择动作$a_1$这个策略的概率$\pi(a_1|s_1)$，然后乘以在状态$s_1$和采取动作$a_1$的情况下，结果到达状态$s_2$的条件概率$p(s_{2}|s_1,a_1)$。</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>p(\tau)&amp;=p(s_0,a_0,s_1,a_1,…) \<br>&amp;=p(s_0)\prod_{t=0}^{T-1}\pi(a_t|s_t)p(s_{t+1}|s_t,a_t) \<br>&amp;=p(s_0)\pi(a_1|s_1)p(s_{2}|s_1,a_1)\prod_{t=1}^{T-1}\pi(a_t|s_t)p(s_{t+1}|s_t,a_t)<br>\end{aligned}<br>$$</p>
+<h5 id="4-1-4-强化学习的目标函数"><a href="#4-1-4-强化学习的目标函数" class="headerlink" title="4.1.4 强化学习的目标函数"></a>4.1.4 强化学习的目标函数</h5><h6 id="4-1-4-1-总回报"><a href="#4-1-4-1-总回报" class="headerlink" title="4.1.4.1 总回报"></a>4.1.4.1 总回报</h6><p>给定策略$\pi(a|s)$，智能体和环境一次交互过程的轨迹$\tau$所收到的累计奖励为总回报(==Return==)<br>$$<br>\begin{aligned}<br>G(\tau)&amp;=\sum_{t=0}^{T-1}r_{t+1} \<br>&amp;=\sum_{t=0}^{T-1}r(s_t,a_t,s_{t+1})<br>\end{aligned}<br>$$<br>假设环境中有一个或多个特殊的<code>终止状态</code>，当到达终止状态时，一个智能体和环境的交互过程就结束了。这一轮交互的过程为一个<code>Episode</code>(回合) 或 <code>trial</code>，一般的强化学习都属于这种<code>回合式任务</code>。</p>
+<p>如果环境中没有终止状态，即$T= \infty$，称为<code>持续式任务</code>，其总汇报也可能跟是无穷大，为了解决这个问题，我们可以引入一个折扣率来降低远期汇报的权重，折扣汇报定义为：<br>$$<br>G(\tau)=\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}<br>$$<br>其中，$\gamma \in [0,1]$是折扣率，当$\gamma$接近$0$时候，智能体更在意短期回报，而当$\gamma$接近于$1$时候，长期汇报变得更重要。</p>
+<h6 id="4-1-4-2-目标函数"><a href="#4-1-4-2-目标函数" class="headerlink" title="4.1.4.2 目标函数"></a>4.1.4.2 目标函数</h6><p>因为策略和状态转移都有一定的随机性，所以每次实验得到的轨迹是一个随机序列，其收获的总汇报也不一样。强化学习的目标是学习到一个<code>策略</code>$\pi_\theta(a|s)$来最大化期望回报(==Expected Return==)，即希望智能体执行一系列的动作来获得尽可能的平均汇报。</p>
+<p>强化学习的目标函数为：<br>$$<br>J(\theta)=E_{\tau\sim p_{\theta}(\tau)}[G(\tau)]=E_{\tau\sim p_{\theta}(\tau)}\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}<br>$$<br>其中$\theta$为策略函数的参数。</p>
+<h5 id="4-1-5-值函数"><a href="#4-1-5-值函数" class="headerlink" title="4.1.5 值函数"></a>4.1.5 值函数</h5><p>为了评估策略$\pi$的期望回报，我们定义两个值函数：<code>状态值函数</code>和<code>状态-动作值函数</code>。</p>
+<h6 id="4-1-5-1-状态值函数"><a href="#4-1-5-1-状态值函数" class="headerlink" title="4.1.5.1 状态值函数"></a>4.1.5.1 状态值函数</h6><p>策略$\pi$的期望回报可以分解为：</p>
+<blockquote>
+<p>相当于全概率公式，将状态$s$的情况拿出来算期望，然后再把所有$s$情况的期望加在一起，结果和原来一样</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>E_{\tau\sim p_(\tau)}[G(\tau)]&amp;=E_{\tau\sim p_(\tau)}\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}\<br>&amp;=E_{s\sim  p(s_0)}[E_{\tau\sim p_(\tau)}[\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}|\tau_{s_0}=s]]\<br>&amp;=E_{s\sim  p(s_0)}[V^{\pi}(s)]<br>\end{aligned}<br>$$</p>
+<p>其中$V^{\pi}(s)$称为<code>状态值函数</code>，表示从状态$s$开始，执行策略$\pi$后得到的期望总回报<br>$$<br>V^{\pi}(s)=E_{\tau\sim p_(\tau)}[\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}|\tau_{s_0}=s]<br>$$</p>
+<p>其中，$\tau_{s_0}$表示轨迹$\tau$的起始状态。</p>
+<p>为了方便起见，我们用$\tau_{0:T}$表示轨迹$s_0,a_0,s_1,a_1,…s_T$，用$\tau_{1:T}$表示轨迹$s_1,a_1,…s_T$，因此有<br>$$<br>\tau_{0:T}=s_0,a_0,\tau_{1:T}<br>$$<br>因此，</p>
+<blockquote>
+<p> 下一个时刻的轨迹为从某个初始的状态出发，执行动作后的期望（概率为策略$\pi$），乘以在初始状态和动作情况下转移到新状态的期望（概率为$p$），最后乘以新轨迹的概率$p$</p>
+</blockquote>
+<p>$$<br>E_{\tau_{0:T} \sim p(\tau)}=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}E_{\tau_{1:T}\sim p(\tau)}<br>$$</p>
+<p>根据马尔可夫性质，$V^{\pi}(s)$可以展开得到：<br>$$<br>\begin{aligned}<br>V^{\pi}(s)&amp;=E_{\tau_{0:T} \sim p(\tau)}[r_1+\gamma\sum_{i=1}^{T-1}\gamma^{t-1}|\tau_{s_0}=s] \<br>&amp;=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}E_{\tau_{1:T}\sim p(\tau)}[r(s,a,s’)+\gamma\sum_{i=1}^{T-1}\gamma^{t-1}|\tau_{s_0}=s’] \<br>&amp;=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{\tau_{1:T}\sim p(\tau)}[\sum_{i=1}^{T-1}\gamma^{t-1}|\tau_{s_0}=s’]] \<br>&amp;=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)] \<br>&amp;=E_{a\sim \pi(a|s)}Q^{\pi}(s,a) </p>
+<p>\end{aligned}<br>$$</p>
+<ul>
+<li><strong>贝尔曼方程</strong> $V^{\pi}(s)=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$</li>
+</ul>
+<p>表示当前状态的值函数可以通过下个状态的值函数来计算。</p>
+<blockquote>
+<p>如果给定了策略$\pi(a|s)$，状态转移概率$p(s’|s,a)$和奖励$r(s,a,s’)$，我们就可以通过迭代的方式来计算$V^{\pi}(s)$，由于存在一定的折扣率，迭代一定步数后，每个状态的值函数就会越来越小，直到固定不变。</p>
+</blockquote>
+<h6 id="4-1-5-2-状态-动作值函数"><a href="#4-1-5-2-状态-动作值函数" class="headerlink" title="4.1.5.2 状态-动作值函数"></a>4.1.5.2 状态-动作值函数</h6><p>公式中的第二个期望是指从初始状态为$s$执行动作$a$，然后执行策略$\pi$得到的总回报，称为<code>状态-动作值函数</code></p>
+<p>表示当前状态的值函数可以通过下个状态的值函数来计算。</p>
+<blockquote>
+<p>如果给定了策略$\pi(a|s)$，状态转移概率$p(s’|s,a)$和奖励$r(s,a,s’)$，我们就可以通过迭代的方式来计算$V^{\pi}(s)$，由于存在一定的折扣率，迭代一定步数后，每个状态的值函数就会越来越小，直到固定不变。</p>
+</blockquote>
+<p>公式中的第二个期望是指从初始状态为$s$执行动作$a$，然后执行策略$\pi$得到的总回报，称为<code>状态-动作值函数</code>，也称为<code>Q函数</code><br>$$<br>Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]<br>$$<br>状态值函数$V^{\pi}(s)$是$Q$函数$Q^{\pi}(s,a)$关于动作$a$的期望，即：<br>$$<br>V^{\pi}(s)=E_{a\sim \pi(a|s)}Q^{\pi}(s,a)<br>$$<br>同理来推导$Q$函数的迭代公式：<br>$$<br>\begin{aligned}<br>Q^{\pi}(s,a)&amp;=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)] \<br>&amp;=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{a’\sim \pi(a’|s’)}Q^{\pi}(s’,a’)] \</p>
+<p>\end{aligned}<br>$$</p>
+<ul>
+<li><strong>Q值的贝尔曼方程</strong> $Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{a’\sim \pi(a’|s’)}Q^{\pi}(s’,a’)]$</li>
+</ul>
+<h6 id="4-1-5-3-值函数的作用"><a href="#4-1-5-3-值函数的作用" class="headerlink" title="4.1.5.3 值函数的作用"></a>4.1.5.3 值函数的作用</h6><p>值函数可以看作对策略$\pi$的评估，因此我们就可以根据值函数来优化策略。假设在状态$s$，有一个动作$a^*$，使得$Q^{\pi}(s,a^*)&gt;v^{\pi}(s)$，即执行动作$a^*$的回报，大于期望值，比当前的策略$\pi(a|s)$要高，我们就可以调整参数，使得策略中动作$a^*$的概率$p(a^*|s)$增加。<br>|              |                    状态值函数$V^{\pi}(s)$                    |                状态-动作值函数$Q^{\pi}(s,a)$                 |<br>| :———-: | :———————————————————-: | :———————————————————-: |<br>|   <strong>含义</strong>   |        从状态$s$开始，执行策略$\pi$后得到的期望总回报        |  从初始状态为$s$执行动作$a$，然后执行策略$\pi$得到的总回报   |<br>| <strong>计算公式</strong> | $V^{\pi}(s)=E_{\tau\sim p_(\tau)}[\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}|\tau_{s_0}=s]$ | $Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$ |<br>|  <strong>贝尔曼</strong>  | $V^{\pi}(s)=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$ | $Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{a’\sim \pi(a’|s’)}Q^{\pi}(s’,a’)]$ |<br>|   <strong>关系</strong>   | 状态值函数$V^{\pi}(s)$是$Q$函数$Q^{\pi}(s,a)$关于动作$a$的期望 |         $V^{\pi}(s)=E_{a\sim \pi(a|s)}Q^{\pi}(s,a)$          |</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210120195508951.png" alt="image-20210120195508951"></p>
+<h5 id="4-1-6-深度强化学习"><a href="#4-1-6-深度强化学习" class="headerlink" title="4.1.6 深度强化学习"></a>4.1.6 深度强化学习</h5><p>在强化学习中，一般需要建模策略$\pi(a|s)$和值函数$V^\pi(s),Q^\pi(s)$。早期的强化学习算法主要关注状态和动作都是离散且有限的问题。</p>
+<p>在强化学习中，一般需要建模策略$\pi(a|s)$和值函数$V^\pi(s),Q^\pi(s)$。早期的强化学习算法主要关注状态和动作都是离散且有限的问题。但在很多实际问题中，有些任务的状态和动作的数量非常多，如在自动驾驶中，智能体感知到的环境状态是各种传感器数据，一般都是连续的，动作是操作方向盘的方向和速度，也是连续的。</p>
+<p>为了有效地解决这些问题，我们可以设计一个更强的策略函数，如<code>深度神经网络</code>，使得智能体可以应对复杂的环境，学习更优的策略，并由更好的泛化能力。</p>
+<p><code>深度强化学习</code>是将强化学习和深度学习结合在一起，其中：</p>
+<ul>
+<li>强化学习：定义问题和优化目标</li>
+<li>深度学习：解决策略和值函数的建模，并用误差反向传播来优化目标函数</li>
+</ul>
+<h4 id="4-2-基于值函数的学习方法"><a href="#4-2-基于值函数的学习方法" class="headerlink" title="4.2 基于值函数的学习方法"></a>4.2 基于值函数的学习方法</h4><p>值函数是对策略$\pi$的评估，如果策略$\pi$有限，即状态数和动作数都有限，可以对所有的策略进行评估并选出<code>最优策略</code>$\pi^*$。<br>$$<br>\forall s,\pi^{<em>}=\underset{\pi}{\arg \max } V^{\pi}(s)<br>$$<br>但这种方式在实践中很难实现，一种可行的方式是通过迭代的方法不断优化策略，直到选出最优策略。对于一个策略$\pi(a|s)$，其$Q$函数为$Q^\pi(s,a)$，我们可以设置一个*<em>新的策略</em></em>$\pi’(a|s)$,</p>
+<p>$$<br>\pi’(a|s)=<br>\left{\begin{array}{ll}<br>1 &amp; \text { if } a=\underset {a}{\arg \max } Q^{\pi}(s, \hat{a}) \<br>0 &amp; \text { otherwise }<br>\end{array}\right.<br>$$<br>即$\pi’(a|s)$是一个确定性的策略，也可以直接写为：<br>$$<br>\pi’(a|s)=\underset {a}{\arg \max } Q^{\pi}(s, {a})<br>$$<br>如果执行$\pi’$，会有<br>$$<br>\forall s,V^{\pi’}(s)\ge V^{\pi}(s)<br>$$</p>
+<blockquote>
+<p>这是因为==V值是Q值的期望==，如果找使得每一个Q值都是最大的策略，就可以让该策略下的任意V值都是比之前策略要好的。</p>
+</blockquote>
+<p>因此，我们可以通过下面方式来学习最优策略：先随机初始化一个策略，计算该策略的值函数，并根据值函数来设置新的策略，然后一直反复迭代直到收敛。</p>
+<p>基于值函数的策略最关键的是如何计算策略$\pi$的值函数，一般有<code>动态规划</code>或<code>蒙特卡洛</code>两种计算方式.</p>
+<h5 id="4-2-1-动态规划算法-Model-based"><a href="#4-2-1-动态规划算法-Model-based" class="headerlink" title="4.2.1 动态规划算法-Model-based"></a>4.2.1 动态规划算法-Model-based</h5><p>从贝尔曼方程可知，如果直到马尔可夫决策过程中的，状态转移概率$p(s’|s,a)$和奖励$r(s,a,s’)$，我们直接可以通过贝尔曼方程来计算其值函数，这种模型已知的强化学习算法也称为基于模型的强化学习，模型指的是马尔可夫决策过程。</p>
+<p>在模型已知时，可以通过动态规划的方法来计算，常用的方法主要有<code>策略迭代</code>算法和<code>值迭代</code>算法。</p>
+<h6 id="4-2-1-1-策略迭代算法"><a href="#4-2-1-1-策略迭代算法" class="headerlink" title="4.2.1.1  策略迭代算法"></a>4.2.1.1  策略迭代算法</h6><p>策略迭代算法，每次迭代可以分为两步：</p>
+<ul>
+<li><strong>策略评估</strong>：计算当前策略下每个状态的值函数(3-6步)。策略评估可以根据贝尔曼方程进行迭代计算$V^\pi(s)$.</li>
+<li><strong>策略改进</strong>：根据值函数来更新策略(7-8步)</li>
+</ul>
+<blockquote>
+<p>收敛是因为折扣系数使得最后V值不变了(或者在很小的误差之内)</p>
+</blockquote>
+<p>$14.18\ V^{\pi}(s)=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$</p>
+<p>$14.19\ Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210121125955862.png" alt="image-20210121125955862"></p>
+<h6 id="4-2-1-2-值迭代算法"><a href="#4-2-1-2-值迭代算法" class="headerlink" title="4.2.1.2  值迭代算法"></a>4.2.1.2  值迭代算法</h6><p>策略迭代算法中的策略评估和策略改进是交替轮流进行，其中策略评估也是通过一个内部迭代来进行计算，其中策略评估也是通过一个内部迭代来进行计算，其计算量比较大，事实上，我们不需要每次计算出策略对应的精确的值函数，也就是说，<strong>内部迭代不需要执行到完全收敛</strong>。</p>
+<p><code>值迭代</code>算法将策略评估和策略改进两个过程合并，来<strong>直接</strong>计算出最优策略。其最优策略$\pi^*$对应的函数为<code>最优值函数</code>，其中包括<code>最优状态值函数</code>$V^*(s)$和<code>最优状态-动作值函数</code>$Q^*(s,a)$，它们之间的关系为：<br>$$<br>V^*(s)=\underset{a}{max}Q^*(s,a)<br>$$<br>根据贝尔曼方程，我们可以通过迭代的方式来计算<code>最优状态值函数</code>$V^*(s)$和<code>最优状态-动作值函数</code>$Q^*(s,a)$：<br>$$<br>V^{<em>}(s)=E_{a\sim \pi(a|s)}E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{</em>}(s’)]<br>$$</p>
+<p>$$<br>Q^{<em>}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{a’\sim \pi(a’|s’)}Q^{</em>}(s’,a’)]<br>$$</p>
+<p>这两个公式称为<code>贝尔曼最优方程</code>。</p>
+<p>值迭代算法通过直接优化贝尔曼最优方程，迭代计算最优值函数，值迭代算法如图所示。</p>
+<p>$14.19\ Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma V^{\pi}(s’)]$</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210121131959139.png" alt="image-20210121131959139"></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">策略迭代</th>
+<th align="center">值迭代</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>复杂度与迭代次数</td>
+<td align="center"></td>
+<td align="center">时间复杂度比策略迭代小，但迭代次数比策略迭代多</td>
+</tr>
+<tr>
+<td>更新值函数</td>
+<td align="center">根据<strong>贝尔曼方程</strong>更新值函数，并根据当前的值函数来<strong>改进策略</strong></td>
+<td align="center">直接使用<strong>贝尔曼最优方程</strong>来更新值函数，收敛时的值函数就是最优的值函数，其对应的策略也就是最优的策略</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>策略迭代算法需要策略评估和改进两个步骤，而值迭代通过最优方程收敛的结果直接就是最优的策略。</p>
+</blockquote>
+<p>基于模型的强化学习算法实际上是一种<code>动态规划</code>算法，在实际应用中有以下两点限制：</p>
+<p>(1) 要求<strong>模型已知</strong>，即要给出马尔可夫决策过程中的<code>状态转移概率</code>和<code>奖励函数</code>，但实际应用中这个要求很难满足，如果我们事先不知道模型，那么可以先让智能体与环境交互来估计模型，即估计状态转移概率和奖励函数。</p>
+<p>一个简单的模型估计方法是$R-max$，通过随机游走的方法来探索环境，每次随机一个策略并执行，然后收集状态转移和奖励的样本，在收集一定的样本后，就可以通过统计或监督学习来重构出马尔可夫决策过程。但是，这种基于重构过程的复杂度也非常高，只能应用于状态数非常少的场合。</p>
+<p>(2) 效率问题，即状态数量较多时，算法效率比较低，但在实际应用中，很多问题的状态数量和动作状态非常多，不管是值迭代还是策略迭代，以当前计算机的计算能力，根本无法计算，一个有效的办法是通过一个函数，如神经网络来近似计算值函数，以减少复杂度并提高泛化能力。</p>
+<h5 id="4-2-2-蒙特卡洛方法-Model-free"><a href="#4-2-2-蒙特卡洛方法-Model-free" class="headerlink" title="4.2.2 蒙特卡洛方法-Model-free"></a>4.2.2 蒙特卡洛方法-Model-free</h5><p>在很多应用场景下，马尔可夫决策过程的状态转移概率$p(s’|s,a)$和奖励函数$r(s,a,s’)$都是未知的，在这种情况下，我们一般需要智能体和环境进行交互，并收集一些样本，然后再根据这些样本来求解马尔可夫最优策略，这种情况未知，基于<strong>采样</strong>的学习算法也成为模型无关的强化学习算法。</p>
+<p>$Q$函数$Q^\pi(s,a)$是初始状态为$s$，并执行动作$a$后所能得到的期望总回报：<br>$$<br>Q^\pi(s,a)=E_{\tau \sim p(\tau)}[G(\tau_{s_0=s,a_0=a})]<br>$$<br>其中，$\tau_{s_0=s,a_0=a}$表示轨迹$\tau$的起始状态和动作为$s,a$</p>
+<p>如果模型未知，$Q$函数可以通过==采样==来计算，这就是蒙特卡洛算法。对于一个策略$\pi$，智能体从状态$s$，执行动作$a$开始，然后通过随机游走的方法来探索环境，并计算其得到的总汇报。假设我们进行了$N$次实验，得到$N$个轨迹$\tau^{(1)},\tau^{(2)},…\tau^{(N)}$，其总汇报分别为$G[\tau^{(1)}],G[\tau^{(2)}],…G[\tau^{(N)}]$。$Q$函数可以近似为：<br>$$<br>Q^{\pi}(s,a)  \approx \hat{Q}^{\pi}(s,a)=\frac{1}{N}\sum_{n=1}^NG(\tau_{s_0=s,a_0=a}^{(n)})<br>$$<br>当$N\rightarrow \infty$时候，$ \hat{Q}^{\pi}(s,a)\rightarrow Q^{\pi}(s,a) $。</p>
+<p>在近似估计出$Q$函数的$\hat{Q}^{\pi}(s,a)$后，就可以进行策略改进，然后在新的策略下重新采样来估计$Q$函数，并不断重复直至收敛。</p>
+<ul>
+<li><strong>利用和探索</strong> Exploitation and exploration</li>
+</ul>
+<blockquote>
+<p>$\pi(s)$为在状态$s$下采取该策略$\pi$的动作$a=\pi(s)$</p>
+</blockquote>
+<p>在蒙特卡洛算法中，如果采用确定性策略$\pi$，每次实验得到的轨迹是一样的，只能计算出$Q^\pi(s,\pi(s))$，而无法计算其他动作$a’$的$Q$函数，因此也无法进一步改进策略。这样情况仅仅是对当前策略的利用，而缺少了对环境的探索，即实验的轨迹应该尽可能覆盖所有的状态和动作，以找到更好的策略。</p>
+<p>为了平衡利用和探索，我们可以采用$\epsilon-greedy Method$，对于一个目标策略$\pi$，其对应的贪心策略为：<br>$$<br>\pi^{\epsilon}(s)=\left{\begin{array}{cc}<br>\pi(s), &amp; \text { 按概率 } 1-\epsilon, \<br>\text { 随机选择氏中的动作, } &amp; \text { 按概率 } \epsilon .<br>\end{array}\right.<br>$$<br>这样，将一个仅利用的策略转为带探索的策略。</p>
+<ul>
+<li><strong>同策略</strong> On-Policy</li>
+</ul>
+<p>在蒙特卡洛算法中，如果采样策略是$\pi^{\epsilon}(s)$，不断改进策略也是$\pi^{\epsilon}(s)$而不是目标策略$\pi(s)$，这种采样与改进策略相同的强化学习算法叫同策略方法，</p>
+<ul>
+<li><strong>异策略</strong> Off-Policy</li>
+</ul>
+<p>如果采样策略是$\pi^{\epsilon}(s)$，而优化目标是策略$\pi$，可以通过<strong>重要性采样</strong>，引入重要性权重来事先对目标策略$\pi$的优化。这种采样与改进分别使用不同策略的强化学习方法叫异策略方法。</p>
+<p>==补充==：<strong>重要性采样</strong></p>
+<p>如果采样的目的是计算分布$p(x)$下函数的期望，那么实际上抽取的样本不需要严格服从分布$p(x)$，也可以通过另一个分布，即提议分布$q(x)$，直接采样并估计$E_[f(x)]$。</p>
+<p>函数$f(x)$在分布$p(x)$下的期望可以写为：<br>$$<br>\begin{aligned}<br>E_p[f(x)]&amp;=\int_xf(x)p(x)dx \<br>&amp;=\int_xf(x)\frac{p(x)}{q(x)}q(x)dx \<br>&amp;=\int_xf(x)w(x)q(x)dx \<br>&amp;=E_q[f(x)w(x)] \<br>\end{aligned}<br>$$<br>原来$f(x)\sim p(x)$，经过转换后$f(x)\sim q(x)$。</p>
+<p>其中$w(x)$为<code>重要性权重</code>，重要性采样是通过引入重要性权重，将分布$p(x)$下$f(x)$的期望变为在分布$q(x)$下$f(x)w(x)$的期望，从而近似为<br>$$<br>\hat{f}_{N}=\frac{1}{N}(f(x^{(1)}) w(x^{(1)})+\cdots+f(x^{(N)}) w(x^{(N)})<br>$$<br>其中，$x^{(1)},x^{(2)},…x^{(N)}$为独立从$q(x)$中随机抽取的点。</p>
+<p>重要性采样也可以在只知道为归一化的分布$\hat{p}(x)$的情况下计算$f(x)$的期望。</p>
+<blockquote>
+<p>$p(x)=\frac{\hat{p}(x)}{Z}$，Z为配分函数。第三行表示成了期望的定义。</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>E_p[f(x)]&amp;=\int_xf(x)p(x)dx \<br>&amp;=\int_xf(x)\frac{\hat{p}(x)}{Z}dx \<br>&amp;=\frac{\int_x\hat{p}(x)f(x)dx}{\int_x\hat{p}(x)dx} \<br>&amp;\approx\frac{\sum_{n=1}^{N} f(x^{(n)}) \hat{w}(x^{(n)})}{\sum_{n=1}^{N} \hat{w}(x^{(n)})}<br>\end{aligned}<br>$$</p>
+<p>其中$\hat{\omega}(x)=\frac{\hat{p}(x)}{q(x)}$为独立从$q(x)$中随机抽取的点。</p>
+<h5 id="4-2-3-时序差分学习方法-Temporal-Difference-Learning"><a href="#4-2-3-时序差分学习方法-Temporal-Difference-Learning" class="headerlink" title="4.2.3 时序差分学习方法-Temporal-Difference Learning"></a>4.2.3 时序差分学习方法-Temporal-Difference Learning</h5><p>蒙特卡洛方法一般要拿到完整的轨迹，才能对策略进行评估并更新模型，因此效率也比较低。时序差分学习方法是蒙特卡洛方法的一种改进，通过引入<code>动态规划</code>来提高学习效率，时序差分学习方法是模拟一段轨迹，每行动一步或者几步，就利用贝尔曼方程来评估行动前状态的价值。</p>
+<p>首先，将蒙特卡洛方法中的$Q$函数$\hat{Q}^\pi(s,a)$的估计改为增量的方式，假设第$N$次实验后值函数$\hat{Q}^\pi(s,a)$的平均为：<br>$$<br>\begin{aligned}<br>\hat{Q}<em>{N}^\pi(s,a)&amp;=\frac{1}{N}\sum</em>{n=1}^NG(\tau_{s_0=s,a_0=a}^{(n)}) \<br>&amp;=\frac{1}{N}\left(G(\tau_{s_0=s,a_0=a}^{(N)})+\sum_{n=1}^{N-1}G(\tau_{s_0=s,a_0=a}^{(n)})\right) \<br>&amp;=\frac{1}{N}\left(G(\tau_{s_0=s,a_0=a}^{(N)})+(N-1)\frac{1}{N-1}\sum_{n=1}^{N-1}G(\tau_{s_0=s,a_0=a}^{(n)})\right) \<br>&amp;=\frac{1}{N}\left(G(\tau_{s_0=s,a_0=a}^{(N)}+(N-1)\hat{Q}<em>{N-1}^\pi(s,a)\right)\<br>&amp;=\hat{Q}</em>{N-1}^\pi(s,a)+\frac{1}{N}\left(G(\tau_{s_0=s,a_0=a}^{(N)}-\hat{Q}_{N-1}^\pi(s,a)\right)</p>
+<p>\end{aligned}<br>$$<br>值函数$\hat{Q}^\pi(s,a)$在第$N$次实验后的平均等于第$N-1$次实验的平均加上一个增量，更一般地，我们将权重系数换位一个比较小的系数$\alpha$,这样每次采用一个新的轨迹，就可以更新$\hat{Q}^\pi(s,a)$。<br>$$<br>\hat{Q}^\pi(s,a) \leftarrow \hat{Q}^\pi(s,a)+\alpha\left(G(\tau_{s_0=s,a_0=a}-\hat{Q}^\pi(s,a)\right)<br>$$<br>其中增量称为蒙特卡洛误差，表示当前轨迹的真实回报$G(\tau_{s_0=s,a_0=a})$与期望回报$\hat{Q}^\pi(s,a)$之间的差距。</p>
+<p>在上述的更新公式中，$G(\tau_{s_0=s,a_0=a})$为一次试验的完整轨迹所得到的总汇报，为了提高效率，可以借助动态规划的方法来计算$G(\tau_{s_0=s,a_0=a})$，而不需要得到完整的轨迹，从$s,a$开始，采样的下一步的状态和动作$(s’,a’)$，并得到奖励$r(s,a,s’)$，然后利用白尔曼公式来近似估计$G(\tau_{s_0=s,a_0=a})$，<br>$$<br>贝尔曼公式:Q^{\pi}(s,a)=E_{s’\sim p(s’|s,a)}[r(s,a,s’)+\gamma E_{a’\sim \pi(a’|s’)}Q^{\pi}(s’,a’)]<br>$$<br>那么有：<br>$$<br>\begin{aligned}<br>G(\tau_{s_0=s,a_0=a,s_1=s’,a_1=a’})&amp;=r(s,a,s’)+\gamma G(\tau_{s_0=s’,a_0=a’}) \<br>&amp;\approx r(s,a,s’)+\gamma \hat{Q}^{\pi}(s’,a’)<br>\end{aligned}<br>$$<br>其中，$\hat{Q}^{\pi}(s’,a’)$是当前的$Q$函数的近似估计，因此更新公式可以修改为：<br>$$<br>\hat{Q}^\pi(s,a) \leftarrow \hat{Q}^\pi(s,a)+\alpha\left(r(s,a,s’)+\gamma \hat{Q}^{\pi}(s’,a’)-\hat{Q}^\pi(s,a)\right)<br>$$<br>因此，更新$\hat{Q}^{\pi}(s’,a’)$只需要知道当前的状态$s$和动作$a$，奖励$r(s,a,s’)$，下一步的状态$s’$和动作$a’$。这种策略学习方法叫做<code>SARSA</code>算法(State Action Reward State Action)。</p>
+<h6 id="4-2-3-1-SARSA-on-policy"><a href="#4-2-3-1-SARSA-on-policy" class="headerlink" title="4.2.3.1 SARSA(on-policy)"></a>4.2.3.1 SARSA(on-policy)</h6><p>$SARSA$算法的学习过程如图所示，其采样和优化的策略都是$\pi^\epsilon$，因此这是一种<code>同策略</code>算法（on-policy），为了提高计算效率，我们不需要对环境中所有的$s,a$组合进行穷举，并计算值函数，只需要将当前探索$(s,a,r,s’,a’)$中的$s’,a’$作为下一次估计的起始状态和动作。</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210121190551773.png" alt="image-20210121190551773"></p>
+<p>时序差分学习是强化学习的主要学习方法，其关键步骤就是在每次迭代中优化$Q$函数来减少现实与预期的差距。这和动物学系的机制十分相像，在大脑神经元中，多巴胺的释放机制和时序差分学习十分吻合，多巴胺的释放，来自对于实际奖励和预期奖励的差异，而不是奖励本身。</p>
+<table>
+<thead>
+<tr>
+<th align="center">算法</th>
+<th align="center">不同</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">时序差分TD</td>
+<td align="center">只需要一步，其总汇报需要通过马尔可夫性质近似估计</td>
+</tr>
+<tr>
+<td align="center">蒙特卡洛MC</td>
+<td align="center">需要一条完整的路径才知道其总回报</td>
+</tr>
+</tbody></table>
+<h6 id="4-2-3-2-Q学习-off-policy"><a href="#4-2-3-2-Q学习-off-policy" class="headerlink" title="4.2.3.2 Q学习(off-policy)"></a>4.2.3.2 Q学习(off-policy)</h6><p>$Q$学习算法是一种异策略的时序差分学习算法，在$Q$学习中，$Q$函数的估计方法为：<br>$$<br>{Q}(s,a) \leftarrow {Q}(s,a)+\alpha\left(r(s,a,s’)+\gamma \underset{a’}{max{Q}(s’,a’)}-{Q}(s,a)\right)<br>$$</p>
+<p>相当于让$Q(s,a)$直接去估计最优状态值函数$Q^*(s,a)$。</p>
+<p>与$SARSA$算法不同，$Q$学习方法不通过$\pi^\epsilon$来选择下一步的动作$a’$，而是直接选最优的$Q$函数，因此更新后的$Q$函数是关于策略$\pi$的，而不是策略$\pi^\epsilon$的，因此是off-policy算法。</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210121203254024.png" alt="image-20210121203254024"></p>
+<h5 id="4-2-4-深度Q网络"><a href="#4-2-4-深度Q网络" class="headerlink" title="4.2.4 深度Q网络"></a>4.2.4 深度Q网络</h5><p>为了在连续的状态和动作空间中计算值函数$Q^\pi(s,a)$，我们可以用一个函数$Q_\phi(s,a)$来表示近似计算，称为值函数近似。<br>$$<br>Q_\phi(s,a) \approx Q^\pi(s,a)<br>$$<br>其中$s,a$分别是状态和动作的向量表示，函数$Q_\phi(s,a)$通常是一个参数为$\phi$的函数，比如神经网络，输出为一个实数，称为<code>Q网络</code></p>
+<p>如果动作为有限离散的$M$个动作$a_1,…a_M$,我们可以让$Q$网络输出一个$M$维向量，其中第$m$维表示$Q_\phi(s,a_m)$，对应值函数$ Q^\pi(s,a_m)$的近似值。<br>$$<br>Q_{\phi}(\boldsymbol{s})=\left[\begin{array}{c}<br>Q_{\phi}\left(\boldsymbol{s}, a_{1}\right) \<br>\vdots \<br>Q_{\phi}\left(\boldsymbol{s}, a_{M}\right)<br>\end{array}\right] \approx\left[\begin{array}{c}<br>Q^{\pi}\left(s, a_{1}\right) \<br>\vdots \<br>Q^{\pi}\left(s, a_{M}\right)<br>\end{array}\right]<br>$$<br>我们需要学习一个参数$\phi$使得函数$Q_\phi(s,a)$可以逼近值函数$Q^\pi(s,a)$。</p>
+<ul>
+<li>如果采用蒙特卡洛方法，就直接让$Q_\phi(s,a)$去逼近平均的总回报$\hat{Q}^\pi(s,a)$</li>
+<li>如果采用时序差分方法，就让$Q_\phi(s,a)$去逼近$E_{s’,a’}[r(s,a,s’)+\gamma {Q}_{\phi}(s’,a’)]$</li>
+</ul>
+<p>以Q学习为例，采取随机梯度下降，其目标函数为：<br>$$<br>\mathcal{L}\left(s, a, s^{\prime} \mid \phi\right)=\left(r+\gamma \max <em>{a^{\prime}} Q</em>{\phi}\left(s^{\prime}, \boldsymbol{a}^{\prime}\right)-Q_{\phi}(\boldsymbol{s}, \boldsymbol{a})\right)^{2}<br>$$<br>然而，这个目标函数存在两个问题：一个是目标不稳定，参数学习的目标依赖于参数本身；二是样本之间有很强的相关性。为了解决这两个问题，$DQN$网络采用了两个措施</p>
+<ul>
+<li>$Freezing Target Networks$： <strong>目标网络冻结</strong>，即在一个时间段内固定目标中的参数，来稳定学习目标</li>
+<li>$Experience Replay$：<strong>经验回放</strong>，即构建一个经验池（$Replay Buffer$）来取出数据相关性，经验池是由智能体最近的经历组成的数据集。</li>
+</ul>
+<p>训练时，随机从经验吃中抽取样本来代替当前的样本用来进行训练，这样，就打破了和相邻训练样本的相似性，避免模型陷入局部最优。经验回放在一定程度的上类似于监督学习，先收集样本，然后在这些样本上进行训练。深度$Q$网络的学习算法如下。</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210121231433797.png" alt="image-20210121231433797"></p>
+<p>整体上，在基于值函数的学习方法中，策略一般为确定性策略。策略优化通常依赖于值函数，比如贪心策略$\pi(s)=\underset {a}{argmaxQ(s,a)}$。最优策略一般需要遍历当前状态$s$下的所有动作，并找出最优的$Q(s,a)$。当动作空间离散但是很大时，遍历球最大需要很高的时间复杂度，当动作空间是连续的并且$Q$为非凸时，也很难求解出最佳的策略。</p>
+<h4 id="4-3-基于策略函数的学习方法"><a href="#4-3-基于策略函数的学习方法" class="headerlink" title="4.3 基于策略函数的学习方法"></a>4.3 基于策略函数的学习方法</h4><p>强化学习的目标是学习到一个策略$\pi_\theta(a|s)$来最大化期望回报。一种直接的方法是在策略空间直接搜索来得到最佳策略，称为<code>策略搜索</code>，策略搜索本质是一个优化问题，可以分为<code>基于梯度的优化</code>和<code>无梯度优化</code>。策略搜索和基于值函数的方法相比，策略搜索可以不需要值函数，直接优化策略，参数化的策略能够处理连续状态和动作，可以直接学出随机性策略。</p>
+<p>策略梯度（Policy Gradient）是一种基于梯度的强化学习算法，假设$\pi_\theta(a|s)$是一个关于$\theta$的连续可微函数，我们可以用梯度上升的方法来优化参数$\theta$使得目标函数$J(\theta)$最大。</p>
+<p>回顾一下强化学习的目标函数为：<br>$$<br>J(\theta)=E_{\tau\sim p_{\theta}(\tau)}[G(\tau)]=E_{\tau\sim p_{\theta}(\tau)}\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}<br>$$</p>
+<p>目标函数$J(\theta)$关于策略参数$\theta$的导数为：</p>
+<blockquote>
+<p>期望就是概率和分布函数乘积的积分。</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>\frac{\partial J(\theta)}{\partial\theta}&amp;=\frac{\partial }{\partial\theta}\int p_\theta(\tau)G(\tau)d\tau \&amp;=\int  (\frac{\partial}{\partial\theta}p_\theta(\tau))G(\tau)d\tau\<br>&amp;=\int p_\theta(\tau)(\frac{1}{p_\theta(\tau)}\frac{\partial}{\partial\theta}p_\theta(\tau))G(\tau)d\tau\<br>&amp;=\int p_\theta(\tau)(\frac{\partial}{\partial\theta}logp_\theta(\tau))G(\tau)d\tau\<br>&amp;=E_{\tau \sim p_\theta(\tau)}[\frac{\partial}{\partial\theta}logp_\theta(\tau))G(\tau)]<br>\end{aligned}<br>$$</p>
+<p>其中，参数$\theta$优化的方向是使得总回报$G(\tau)$最大的轨迹$\tau$的概率$p_\theta(\tau)$也越大。</p>
+<p>$\frac{\partial}{\partial\theta}logp_\theta(\tau)$可以进一步分解为：<br>$$<br>\begin{aligned}<br>\frac{\partial}{\partial\theta}logp_\theta(\tau)&amp;=\frac{\partial}{\partial\theta}log(p(s_0)\prod_{t=0}^{T-1}\pi_{\theta}(a_t|s_t)p(s_{t+1}|s_t,a_t))\<br>&amp;=\frac{\partial}{\partial\theta}(log(p(s_0)+\sum_{t=0}^{T-1}log\pi_\theta(a_t|s_t)+\sum_{t=0}^{T-1}logp(s_{t+1}|s_t,a_t)\<br>&amp;=\frac{\partial}{\partial\theta}\sum_{t=0}^{T-1}log\pi_\theta(a_t|s_t)\<br>&amp;=\sum_{t=0}^{T-1}\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)<br>\end{aligned}<br>$$<br>因此，$\frac{\partial}{\partial\theta}logp_\theta(\tau)$是和状态转移概率无关，只和策略函数有关。</p>
+<p>那么策略梯度$\frac{\partial J(\theta)}{\partial\theta}$可以写为：</p>
+<blockquote>
+<p>回顾一下，$G(\tau)=\sum_{t=0}^{T-1}\gamma^{t}r_{t+1}$</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>\frac{\partial J(\theta)}{\partial\theta}&amp;=\frac{\partial }{\partial\theta}\int p_\theta(\tau)G(\tau)d\tau \&amp;=\int  (\frac{\partial}{\partial\theta}p_\theta(\tau))G(\tau)d\tau\<br>&amp;=\int p_\theta(\tau)(\frac{1}{p_\theta(\tau)}\frac{\partial}{\partial\theta}p_\theta(\tau))G(\tau)d\tau\<br>&amp;=\int p_\theta(\tau)(\frac{\partial}{\partial\theta}logp_\theta(\tau))G(\tau)d\tau\<br>&amp;=E_{\tau \sim p_\theta(\tau)}[\frac{\partial}{\partial\theta}logp_\theta(\tau))G(\tau)]\<br>&amp;=E_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1}\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)G(\tau)]\<br>&amp;=E_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1}\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)(G(\tau_{0:t})+\gamma^tG(\tau_{t:T}))]\<br>&amp;=E_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1}\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)(\gamma^tG(\tau_{t:T}))]\<br>\end{aligned}<br>$$</p>
+<blockquote>
+<p>时刻$t$之前的回报和时刻$t$之后的动作无关。</p>
+</blockquote>
+<p>其中$G(\tau_{t:T})$表示从时刻$t$作为起始时刻收到的总回报。<br>$$<br>G(\tau_{t:T})=\sum_{t’=t}^{T-1}\gamma^{t’-t}r_{t’+1}<br>$$</p>
+<h6 id="4-3-1-REINFORCE算法"><a href="#4-3-1-REINFORCE算法" class="headerlink" title="4.3.1 REINFORCE算法"></a>4.3.1 REINFORCE算法</h6><p>期望可以通过采样的方式来近似，根据当前的策略$\pi_\theta$，通过<code>随机游走</code>的方式来采集多个轨迹$\tau^{(1)},\tau^{(2)},…\tau^{(N)}$，其中每一条轨迹$\tau^{(n)}=s_0^{n},a_0^{n},s_1^{n},a_1^{n},…$那么策略梯度$\frac{\partial J(\theta)}{\partial\theta}$可以写为：<br>$$<br>\frac{\partial J(\theta)}{\partial\theta} \approx \frac{1}{N} \sum_{n=1}^N[\sum_{t=0}^{T-1}\frac{\partial}{\partial\theta}log\pi_\theta(a_t^{(n)}|s_t^{(n)})(\gamma^tG(\tau_{t:T}^{(n)}))]<br>$$<br>结合随机梯度上升算法，我们可以每次采集一条轨迹，计算每个时刻的梯度并更新参数，称为$REINFORCE$算法。</p>
+<p><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210122141926315.png" alt="image-20210122141926315"></p>
+<h6 id="4-3-2-带基准线的REINFORCE算法"><a href="#4-3-2-带基准线的REINFORCE算法" class="headerlink" title="4.3.2 带基准线的REINFORCE算法"></a>4.3.2 带基准线的REINFORCE算法</h6><p>$REINFORCE$算法的一个主要缺点是不同路径之间的方差很大，导致训练不稳定，这是在高维空间中使用蒙特卡洛方法的通病。一种减少方差的通用方法是引入一个控制变量，假设要估计函数$f$的期望，为了减少$f$的方差，我们引入一个已知期望的函数$g$，令<br>$$<br>\hat{f}=f-\alpha(g-E[g])<br>$$<br>因为$E[\hat{f}]=E[f]$，可以用$\hat{f}$的期望来估计函数$f$的期望，同时利用函数$g$来减少$\hat{f}$的方差。</p>
+<p>函数$\hat{f}$的方差为：</p>
+<blockquote>
+<p>补充期望和方差的公式,$D(x)=E(x^2)-[E(x)^2]$，且$E[g]$为常数，常数的方差为0。$g$是参数，是变量，而$E(g)$是一个常数</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>D(\hat{f})&amp;=D(f)+D(\alpha(g-E[g]))-2cov(f,\alpha(g-E(g)))\<br>&amp;=D(f)+\alpha^2D(g-E[g])-2cov(f,\alpha g)+2cov(f,\alpha E(g))\<br>&amp;=D(f)+\alpha^2[D(g)+D(E[g])-2cov(g,E(g))]-2\alpha cov(f,g)+2\alpha cov(f,E(g))\<br>&amp;=D(f)+\alpha^2D(g)+\alpha^2D(E[g])-2\alpha cov(f,g)+2\alpha cov(f,E(g))\<br>&amp;=D(f)+\alpha^2D(g)-2\alpha cov(f,g)<br>\end{aligned}<br>$$</p>
+<p>如果想让$D(\hat{f})$最小，令$\frac{\partial D(\hat{f})}{\partial\alpha}=0$，则有：<br>$$<br>\alpha=\frac{cov(f,g)}{D(g)}<br>$$<br>因此<br>$$<br>\begin{aligned}<br>D(\hat{f})&amp;=D(f)+\frac{cov(f,g)^2}{D(g)}-\frac{2cov(f,g)^2}{D(g)}\<br>&amp;=(1-\frac{cov(f,g)^2}{D(g)D(f)})D(f)\<br>&amp;=(1-corr(f,g)^2)D(f)<br>\end{aligned}<br>$$<br>其中，$corr(f,g)$为函数$f$和$g$的相关性，如果相关性越高，则$\hat{f}$的方差越小。</p>
+<p><code>带基准线的REINFORCE算法</code>在每个时刻$t$，其策略梯度变为：<br>$$<br>\frac{\partial J(\theta)}{\partial\theta} =E_{s_t}\left[E_{a_t}[\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)(\gamma^tG(\tau_{t:T})]\right]<br>$$<br>为了减少策略梯度的方差，我们引入一个与$a_t$无关的基准函数$b(s_t)$，<br>$$<br>\frac{\partial \hat{J}(\theta)}{\partial\theta} =E_{s_t}\left[E_{a_t}[\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)(\gamma^tG(\tau_{t:T})-b(s_t)]\right]<br>$$<br>因为$b(s_t)$与$a_t$无关，则有</p>
+<blockquote>
+<p>$\int_{a_t}\pi_\theta(a_t|s_t)da_t=1$，所有策略的积分是1。第三个等号处$b(s_t)$$\theta$无关，可以拿出来也可以放进去。</p>
+<p>先积分后求导和先求导后积分是等价的。</p>
+</blockquote>
+<p>$$<br>\begin{aligned}<br>E_{a_t}[b(s_t)\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)]&amp;=\int_{a_t}\left(b(s_t)\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)\right)\pi_{\theta}(a_t|s_t)da_t\<br>&amp;=\int_{a_t}\left(b(s_t)\frac{\partial}{\partial\theta}\pi_\theta(a_t|s_t)\right)da_t\<br>&amp;=\frac{\partial}{\partial\theta}\left(b(s_t)\int_{a_t}\pi_\theta(a_t|s_t)da_t\right)\<br>&amp;=\frac{\partial}{\partial\theta}(b(s_t)\cdot 1)\<br>&amp;=0<br>\end{aligned}<br>$$</p>
+<p>因此可以知道$\frac{\partial \hat{J}(\theta)}{\partial\theta}=\frac{\partial {J}(\theta)}{\partial\theta}$</p>
+<p>为了有效减小方差，$b(s_t)$和$G(\tau_{t:T})$越相关越好，一个很自然的选择是令$b(s_t)$为值函数$V^{\pi_\theta}(s_t)$，而值函数未知，我们可以用一个科学系的函数$V_\phi(s_t)$来近似值函数，目标函数为<br>$$<br>L(\phi|s_t,\pi_\theta)=(V^{\pi_\theta}(s_t)-V_\phi(s_t))^2<br>$$<br>其中，$V^{\pi_\theta}(s_t)=E[G(\tau_{t:T})]$也用蒙特卡洛方法估计。采用随机梯度下降法，参数$\phi$的梯度为：</p>
+<blockquote>
+<p>其中的系数2已经不重要了。</p>
+</blockquote>
+<p>$$<br>\frac{\partial \mathcal{L}\left(\phi | s_{t}, \pi_{\theta}\right)}{\partial \phi}=-\left(G\left(\tau_{t: T}\right)-V_{\phi}\left(s_{t}\right)\right) \frac{\partial V_{\phi}\left(s_{t}\right)}{\partial \phi}<br>$$<br>策略函数参数$\theta$的梯度为：<br>$$<br>\frac{\partial \hat{J}(\theta)}{\partial\theta} =E_{s_t}\left[E_{a_t}[\frac{\partial}{\partial\theta}log\pi_\theta(a_t|s_t)(\gamma^tG(\tau_{t:T})-b(s_t)]\right]<br>$$<br><img src="C:\Users\孙昊一\OneDrive\markdown\隐马尔可夫模型.assets\image-20210122202540175.png" alt="image-20210122202540175"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://SunHaoOne.github.io/2021/03/21/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B/">https://SunHaoOne.github.io/2021/03/21/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/03/21/%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/21/%E5%86%B3%E7%AD%96%E6%A0%91/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PCA特征值分解的两种推导, 蛋总的快乐生活">
+    <meta name="keywords" content="Docker常见命令, 蛋总的快乐生活">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PCA特征值分解的两种推导 | 蛋总的快乐生活</title>
+    <title>Docker常见命令 | 蛋总的快乐生活</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,7 +319,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PCA特征值分解的两种推导</h1>
+                    <h1 class="description center-align post-title">Docker常见命令</h1>
                 </div>
             </div>
         </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-21
+                    2021-04-15
                 </div>
                 
 
@@ -485,75 +485,224 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="PCA特征值分解的推导公式"><a href="#PCA特征值分解的推导公式" class="headerlink" title="PCA特征值分解的推导公式"></a>PCA特征值分解的推导公式</h1><h2 id="一、方差的定义"><a href="#一、方差的定义" class="headerlink" title="一、方差的定义"></a>一、方差的定义</h2><p>​<br>​<br>$$<br>\begin{equation}</p>
-<p>Var(x)=\frac{1}{m}\sum_{i=1}^m{(x_i-\mu)^2} \</p>
-<p>\end{equation}<br>$$<br><strong>去除均值，方便计算</strong></p>
-<p> $x\leftarrow x-E[x]$</p>
-<p>为了方便处理，我们将每个变量的均值都化为 0 ，因此方差可以直接用每个元素的平方和除以元素个数表示<br>$$<br>\begin{equation}</p>
-<p>Var(x)=\frac{1}{m}\sum_{i=1}^m{(x_i)^2}</p>
-<p>\end{equation}<br>$$</p>
-<h2 id="二、协方差的定义"><a href="#二、协方差的定义" class="headerlink" title="二、协方差的定义"></a>二、协方差的定义</h2><p>$$<br>\begin{equation}</p>
-<p>Cov(x,y)=\frac{1}{m}\sum_{i=1}^m{(x_i-\mu_x)(y_i-\mu_y)} \<br>\end{equation}<br>$$</p>
-<p>由于均值为 0，所以我们的协方差公式可以表示为：<br>$$<br>Cov(x,y)=\frac{1}{m}\sum_{i=1}^m{x_iy_i} \<br>$$</p>
-<h2 id="三、协方差矩阵"><a href="#三、协方差矩阵" class="headerlink" title="三、协方差矩阵"></a>三、协方差矩阵</h2><p>将$x$和$y$变量拼成一个矩阵$X$<br>$$<br>X=\begin{pmatrix}  x_1 &amp; x_2 &amp; \cdots &amp; x_m \ y_1 &amp; y_2 &amp; \cdots &amp; y_m  \end{pmatrix} \<br>$$<br>那么计算协方差矩阵<br>$$<br>\Sigma=\frac{1}{m}XX^\mathsf{T}= \begin{pmatrix}  \frac{1}{m}\sum_{i=1}^m{x_i^2} &amp; \frac{1}{m}\sum_{i=1}^m{x_iy_i} \ \frac{1}{m}\sum_{i=1}^m{x_iy_i} &amp; \frac{1}{m}\sum_{i=1}^m{y_i^2}  \end{pmatrix} = \begin{pmatrix}  Cov(x,x) &amp; Cov(x,y) \  Cov(y,x) &amp; Cov(y,y) \end{pmatrix} \<br>$$<br>顺便说一下,$x^2$的期望也就是它与它自身的协方差，记为$C^x$<br>$$<br>E(x^2)=\frac{1}{m}\sum_{i=1}^m{x_i^2}=C_{x}<br>$$</p>
-<h2 id="四、方差最大化"><a href="#四、方差最大化" class="headerlink" title="四、方差最大化"></a>四、方差最大化</h2><ul>
-<li><p>假设原来有两个变量$x_1,x_2$,三个样本点分别为$A,B,C$，样本分布在由$x_1,x_2$轴组成的坐标系中。</p>
-</li>
-<li><p>对坐标系进行旋转变换，得到新的坐标轴$y_1$，表示新的变量$y_1$</p>
-</li>
-<li><p>样本点$A,B,C$在$y_1$轴上投影，得到$y_1$轴的坐标值为$A^{’},B^{’},C^{’}$</p>
-</li>
-<li><p>坐标轴的平方和为$OA^{’2}+OB^{’2}+OC^{’2}$表示样本在变量$y_1$上的方差和</p>
-</li>
-<li><p>主成分分析旨在选取正交变换中方差最大的变量，作为第一主成分，也就是旋转变换中坐标值平方和最大的轴</p>
-</li>
-<li><p>而我们知道，对于样本而言，本身的$OA^{2}+OB^{2}+OC^{2}$为固有值，不变</p>
-</li>
-<li><p>因此可以通过勾股定理知道，方差最大$OA^{’2}+OB^{’2}+OC^{’2}$最大等价于样本点到$y_1$轴的距离$AA^{’2}+BB^{’2}+CC^{’2}$最小</p>
-</li>
+                <blockquote>
+<p>本文主要通过两个方法熟悉docker的基本使用方法，一个是通过<strong>docker pull</strong>的方式拉取，另一个是通过<strong>docker build</strong>的方式建立</p>
+</blockquote>
+<h1 id="一、Docker简介"><a href="#一、Docker简介" class="headerlink" title="一、Docker简介"></a>一、Docker简介</h1><h2 id="1-1-容器与镜像"><a href="#1-1-容器与镜像" class="headerlink" title="1.1 容器与镜像"></a>1.1 容器与镜像</h2><ul>
+<li><code>Docker</code>的主要组成部分有镜像<code>Image</code>和容器<code>Container</code></li>
+<li>通过镜像来构建多个容器</li>
+<li>修改后的容器能生成新的镜像文件，通过<strong>版本号</strong>来区分</li>
 </ul>
-<img src="C:\Users\孙昊一\OneDrive\markdown\主成分分析.assets\image-20201127103758146.png" alt="image-20201127103758146" style="zoom: 33%;" />
+<blockquote>
+<p>镜像可以理解成一个模板，可以生成很多个容器，结果比较好的容器可以保存成新的模板，由于新的模板是继承于原始镜像的，因此最好加上版本号来表示这个是新版本的镜像。</p>
+</blockquote>
+<h2 id="1-2-Docker与GPU"><a href="#1-2-Docker与GPU" class="headerlink" title="1.2 Docker与GPU"></a>1.2 Docker与GPU</h2><ul>
+<li>在服务器里可以使用<code>docker</code>运行程序</li>
+<li><code>docker</code>里一般配置了对应的<code>cuda</code>版本文件</li>
+<li><code>github</code>上的一些项目提供了<code>docker</code>版本，通过<strong>docker pull</strong>拉取镜像后无需配置，即可进入原作者的配置工作环境</li>
+<li>在<code>docker</code>里监视显卡的一个常见命令为：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> watch -n 1 nvidia-smi</span></span><br></pre></td></tr></table></figure>
 
-<p>基于PCA的线性结合的<strong>第一个主成分</strong>为<br>$$<br>\begin{equation}</p>
-<p>y_1=\sum_{k=1}^n \omega_{k1}x_k=\omega_1^Tx</p>
-<p>\end{equation}<br>$$<br>那么最大化方差为<br>$$<br>D(y_1)=E(y_1^2)-E(y_1)^2<br>$$<br>而经过了去掉均值化后，期望为0<br>$$<br>E(y_1)=E(\sum_{k=1}^n \omega_{k1}x_k)=E(\omega_1^Tx)=0<br>$$<br>去均值化期望为0的具体步骤如下，假设$x_k$为未去除均值的情况，均值为$\mu$<br>$$<br>E(\sum_{k=1}^n \omega_{k1}x_k)=\omega_{k1}^TE(\sum_{k=1}^n x_k)\\rightarrow\omega_{k1}^TE(\sum_{k=1}^n (x_k-\mu))=\omega_{k1}^T(E(\sum_{k=1}^nx_k)-n\mu)=0<br>$$<br><strong>例子：</strong>再进一步理解一下期望的推导过程，看一下去均均值化的过程。纵轴为$x_2$，横轴为$x_1$</p>
+<blockquote>
+<p>表示每隔1s监视一下显卡的使用状况</p>
+</blockquote>
 <ul>
-<li><p>比如对于几个个样本点$(1,0),(2,1),(3,2)$构成的直线来说，组成的直线方程为$x_1-x_2-1=0$,那么可以写成<br>$$<br>x_1-x_2-1=(-1,1,-1)(1,x_1,x_2)^T<br>$$<br>那么根据这几个样本点，计算他们的期望如下<br>$$<br>\begin{aligned}<br>E(\sum_{k=1}^n \omega_{k1}x_k)&amp;=\omega_{k1}^TE(\sum_{k=1}^n x_k) \&amp;=(-1,1,-1)E[\sum_{k=1}^{1}1,x_1,x_2]^T<br>\&amp;=(-1,1,-1)E[(1,1,0)^T+(1,2,1)^T+(1,3,2)^T] \&amp;=(-1,1,-1)E[(3,6,3)^T]<br>\&amp;=0</p>
-<p>\end{aligned}<br>$$<br>因为这些样本点在直线上，期望肯定是0，这里看的是右面的部分，变量的期望，去均值化的时候目的是让$E$中去均值后的$x$为$0$</p>
-<ul>
-<li>那么对于$x_1$和$x_2$，去掉他们的均值$2$和$1$后计算：</li>
+<li>不需要安装<code>nvidia-docker</code>这个版本，目前最新<code>docker</code>已经支持GPU。</li>
 </ul>
-<p>$$<br>\begin{aligned}<br>E(\sum_{k=1}^n \omega_{k1}x_k)&amp;\rightarrow\omega_{k1}^TE(\sum_{k=1}^n (x_k-\mu)) \&amp;=(-1,1,-1)E[\sum_{k=1}^{1}1-1,x_1-2,x_2-1]^T<br>\&amp;=(-1,1,-1)E[(0,-1,-1)^T+(0,0,0)^T+(0,1,1)^T] \&amp;=(-1,1,-1)E[(0,0,0)^T]<br>\&amp;=0</p>
-<p>\end{aligned}<br>$$</p>
-<p>新的方程为$(1)<em>(x_1-2)+(-1)</em>(x_2-1)=0$,如果令$x_3=x_1-2，x_4=x_2-1$，通过去均值那么就得到了让直线经过了原点，去除了截距项,即$x_3-x_4=0$</p>
-</li>
+<h1 id="二、Docker-拉取镜像"><a href="#二、Docker-拉取镜像" class="headerlink" title="二、Docker 拉取镜像"></a>二、Docker 拉取镜像</h1><h2 id="2-1-从Docker官网拉取"><a href="#2-1-从Docker官网拉取" class="headerlink" title="2.1 从Docker官网拉取"></a>2.1 从Docker官网拉取</h2><ul>
+<li>一般来说，通过如下命令从<code>docker</code>官网里直接拉取镜像。</li>
+<li>一些公司在<code>docker</code>官网购买了对应的存储镜像位置，比如 <a target="_blank" rel="noopener" href="https://hub.docker.com/u/carlasim">https://hub.docker.com/u/carlasim</a></li>
+<li>进去后可以看到拉取的命令，输入后即从该网站拉取了<code>carla</code>，等价于第二行的拉取最新版本。</li>
 </ul>
-<p>那么回到(9)式，继续计算这个方差，有两种理解办法，过程是一样的</p>
-<ul>
-<li>第一种根据方差与期望的关系，通过(10)(11)算式推得到$E(y_1)=0$从而最大化方差$D(y_1)$等价于最大化$E(y_1^2)$</li>
-<li>第二种根据(2)的算式，期望为0，得到以下形式，结果是相同的</li>
-</ul>
-<p>$$<br>\begin{aligned} J_1^{PAC}(w_1)=D(y_1)&amp;=\frac{1}{m}\sum_{i=1}^{m}(x_1^Tw)^2 \&amp; =\frac{1}{m}\sum_{i=1}^{m}(x_1^Tw)^T(x_1^Tw) \ &amp;=\frac{1}{m}\sum_{i=1}^{m}w^Tx_1x_1^Tw \&amp; = w^T(\frac{1}{m}\sum_{i=1}^{m}x_1x_1^T)w\&amp; =w^T E(x^2)w\&amp;=w^T\Sigma w\&amp;=w^TC_x w\end{aligned} \<br>$$<br>最后得到的最优化问题是<br>$$<br>max:w^TC_x w\<br>s.t:w^Tw=1<br>$$</p>
-<h2 id="五、均方误差最小化-MSE"><a href="#五、均方误差最小化-MSE" class="headerlink" title="五、均方误差最小化(MSE)"></a>五、均方误差最小化(MSE)</h2><p>在方差最大化的图中，可以知道<strong>Variance+MSE=定值</strong>，因此二者是等价的，<strong>换一种思路</strong>通过均方误差最小化进行推导。</p>
-<h3 id="向量的投影"><a href="#向量的投影" class="headerlink" title="向量的投影"></a>向量的投影</h3><img src="C:\Users\孙昊一\OneDrive\markdown\主成分分析.assets\image-20201127103758146.png" alt="image-20201127103758146" style="zoom: 33%;" />
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker pull carlasim/carla</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker pull carlasim/carla:latest</span></span><br></pre></td></tr></table></figure>
 
-<p>以该图的B点为例，设B点的坐标为$(x_1,x_2)$,其所代表的向量为$\overrightarrow{OB}=\overrightarrow{x}=(x_1,x_2)$,由于$y_1=\sum_{k=1}^n \omega_{k1}x_k=\omega_1^Tx$,那么可以同样表示出直线的<strong>单位</strong>方向向量为$\overrightarrow{w}=(w_1,w_2)$,（注：由于该直线过原点就没有写截距项1）那么先算$\overrightarrow{x}$向量和$\overrightarrow{w}$向量的夹角$\theta$.</p>
-<p>由于$w^Tw=1$,即$|\overrightarrow{w}|=1$,可以继续化简为：<br>$$<br>\begin{aligned}<br>cos\theta&amp;=\frac {\overrightarrow{x}\overrightarrow{w}}{|\overrightarrow{x}||\overrightarrow{w}|}\&amp;=\frac {\overrightarrow{x}\overrightarrow{w}}{|\overrightarrow{x}|}<br>\end{aligned}<br>$$</p>
-<p>那么$OB’$的长度为<br>$$<br>OB^{’}=OB*cos\theta=|\overrightarrow{x}|*\frac {\overrightarrow{x}\overrightarrow{w}}{|\overrightarrow{x}|}<br>=\overrightarrow{x}\overrightarrow{w}<br>$$<br>那么$OB’$的方向为<br>$$<br>\frac{\overrightarrow{w}}{|\overrightarrow{w}|}=\overrightarrow{w}<br>$$<br>因此$OB’$的向量为<br>$$<br>\overrightarrow{OB^{’}}=\overrightarrow{x}\overrightarrow{w}*\overrightarrow{w}<br>$$<br>在这个部分，我们的目标是最小化均方误差，也就是$min(AA^{’2}+BB^{’2}+CC^{’2})$</p>
-<p>下一步就是表示出$\overrightarrow{B^{’}B}$,由向量的知识，（方向换一下没事，因为还要平方）可以得到<br>$$<br>\begin{aligned}<br>\overrightarrow{B^{’}B}&amp;=\overrightarrow{OB}-\overrightarrow{OB’}\&amp;=\overrightarrow{x}-\overrightarrow{x}\overrightarrow{w}<em>\overrightarrow{w}\&amp;=x-(w^Tx)w<br>\end{aligned}<br>$$<br>因此目标为<br>$$<br>\begin{aligned}<br>J_{MSE}^{PCA}&amp;=E(\vert\vert x-\sum_{i=1}^{m}(w_i^Tx)w_i   \vert\vert^2)<br>\&amp;=E(\vert\vert x\vert\vert^2)-2E(x^T\sum_{i=1}^{m}(w_i^Tx)w_i)+E(\sum_{i=1}^{m}((w_i^Tx)w_i)^2)<br>\&amp;=E(\vert\vert x\vert\vert^2)-2w^TE(\sum_{i=1}^{m}(x^Tx)^2)w+E((\sum_{i=1}^{m}((w_i^Tx)w_i)^T</em>(w_i^Tx)w_i)<br>\&amp;=E(\vert\vert x\vert\vert^2)-2w^TE(\sum_{i=1}^{m}(x^Tx)^2)w+w^TE(\sum_{i=1}^{m}(x^Tx)^2)w<br>\&amp;=E(\vert\vert x\vert\vert^2)-w^TE(\sum_{i=1}^{m}(x^Tx)^2)w<br>\&amp;=trace(C_x)-w^TC_x w<br>\end{aligned}<br>$$<br>由于协方差$C_x$是定值，因此$w^TC_x w$越大，均方误差越小。</p>
-<p>即得到的最优化问题为：<br>$$<br>max:w^TC_x w\<br>s.t:w^Tw=1<br>$$</p>
-<h2 id="六、求解最优化问题"><a href="#六、求解最优化问题" class="headerlink" title="六、求解最优化问题"></a>六、求解最优化问题</h2><p>根据拉格朗日方程：<br>$$<br>L(w,\lambda)=w^TC_x w-\lambda(w^Tw-1)<br>$$</p>
-<p>那么对w求导可以得到<br>$$<br>2C_xw-2\lambda w=0<br>$$<br>因此$C_xw=\lambda w$代入后有<br>$$<br>w^TC_x w=w^T(C_x w)=w^T\lambda w=\lambda w^Tw=\lambda<br>$$<br>即寻找最大的特征值$\lambda$即为所求。</p>
-<p>那么从大到小排列，便得到了各个主成分。</p>
-<h1 id="高维小样本数据集的PCA方法预降维度方法及相关公式"><a href="#高维小样本数据集的PCA方法预降维度方法及相关公式" class="headerlink" title="高维小样本数据集的PCA方法预降维度方法及相关公式"></a>高维小样本数据集的PCA方法预降维度方法及相关公式</h1><ul>
-<li><p>例如: $x_i∈R^n, i=1,2,…,k.$</p>
+<ul>
+<li>点击<code>Tag</code>后看到有不同的版本，默认不输入是拉取最新版本，选择版本如下所示</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker docker pull carlasim/carla:0.9.11</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>很可能遇见下载的问题，比如连接超时，那么如何解决呢？</p>
+</blockquote>
+<h3 id="2-1-1-科学上网"><a href="#2-1-1-科学上网" class="headerlink" title="2.1.1 科学上网"></a>2.1.1 科学上网</h3><h3 id="2-1-2-阿里云加速"><a href="#2-1-2-阿里云加速" class="headerlink" title="2.1.2 阿里云加速"></a>2.1.2 阿里云加速</h3><ul>
+<li>注册阿里云账号并打开该网页：<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></li>
+<li>复制该网页最下面的语句，大概如下所示，<code>xxx</code>需要替换成你账号提供的信息</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo mkdir -p /etc/docker</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span></span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://xxx.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo systemctl daemon-reload</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo systemctl restart docker</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要一行一行输入，第二句的意思是在这个配置文件的末尾加入这个语句，如果出现了<strong>Runtime</strong>的问题，说明可能完全替换了这个配置文件，通过复制原始的文件后，也可以通过手动修改的方式修改<strong>daemon.json</strong>文件。</p>
+</blockquote>
+<h2 id="2-2-从阿里云拉取"><a href="#2-2-从阿里云拉取" class="headerlink" title="2.2 从阿里云拉取"></a>2.2 从阿里云拉取</h2><ul>
+<li>可以通过阿里云服务器<strong>docker pull</strong>到本地</li>
+<li>一些比赛中提供了镜像的地址</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker pull registry.cn-shanghai.aliyuncs.com/tcc-public/super-mario-ppo:race</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当然也可以通过自己仓库里直接拉取，详情见<code>3.3.2</code>节</li>
+</ul>
+<h1 id="三、Docker-更新镜像"><a href="#三、Docker-更新镜像" class="headerlink" title="三、Docker 更新镜像"></a>三、Docker 更新镜像</h1><blockquote>
+<p>对于第一次运行，应该使用<strong>docker run</strong>，而进入已经运行的容器，使用<strong>docker exec</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">缩写</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">–detach</td>
+<td align="center">-d</td>
+<td align="center">在后台运行容器，并且打印容器id。</td>
+</tr>
+<tr>
+<td align="center">–interactive</td>
+<td align="center">-i</td>
+<td align="center">即使没有连接，也要保持标准输入保持打开状态，一般与 -t 连用。</td>
+</tr>
+<tr>
+<td align="center">–tty</td>
+<td align="center">-t</td>
+<td align="center">分配一个伪tty，一般与 -i 连用。</td>
+</tr>
+</tbody></table>
+<p>首先查看一下镜像有哪些？(可能需要有管理员权限)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker images</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">air                 cpu_r.1             047dc00744a3        15 months ago       2.59GB</span><br><span class="line">nvidia/cuda         9.0-base            3c57055e68a2        16 months ago       140MB</span><br><span class="line">deepdrive/spc       latest              8a5399f1ba56        20 months ago       29GB</span><br><span class="line">carlasim/carla      0.9.6               daf8c17483e2        21 months ago       6.7GB</span><br><span class="line">carlasim/carla      0.9.5               130f9443c473        2 years ago         7.95GB</span><br><span class="line">carlasim/carla      0.8.4               35e5046c8e16        2 years ago         10.4GB</span><br></pre></td></tr></table></figure>
+
+<p>那么一个文件可以有两个身份，分别是<code>仓库:标签</code>,<code>镜像ID</code></p>
+<ul>
+<li><code>carlasim/carla:0.9.6</code></li>
+<li><code>daf8c17483e2</code></li>
+</ul>
+<p>因此进入的方法也有两种。</p>
+<h2 id="3-1-进入容器的方法"><a href="#3-1-进入容器的方法" class="headerlink" title="3.1 进入容器的方法"></a>3.1 进入容器的方法</h2><h3 id="3-1-1-docker-run-it"><a href="#3-1-1-docker-run-it" class="headerlink" title="3.1.1 docker run -it"></a>3.1.1 docker run -it</h3><blockquote>
+<p>首次运行时候应该使用该指令，类似地，可以通过仓库标签的形式进入，也可以通过镜像ID</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -it carlasim/carla:0.9.6 /bin/bash</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -it daf8c17483e2 /bin/bash</span></span><br></pre></td></tr></table></figure>
+
+<p>运行后会生成一个容器，该容器的ID为<code>1142d7e8c313</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps -a</span></span><br></pre></td></tr></table></figure>
+
+<p>该指令可以看到所有的容器。</p>
+<h3 id="3-1-2-docker-exec-it"><a href="#3-1-2-docker-exec-it" class="headerlink" title="3.1.2 docker exec -it"></a>3.1.2 docker exec -it</h3><blockquote>
+<p>该指令是下一次用docker需要输入的指令，实际上，<strong>docker run</strong>后会生成一个新的容器，而在关闭后该容器并不会消失</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker <span class="built_in">exec</span> -it daf8c17483e2 /bin/bash</span></span><br></pre></td></tr></table></figure>
+
+<p>使用完后，可以停止这个容器，如果下次用还可以激活该容器，并且保留上次的修改结果。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker start daf8c17483e2</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker stop daf8c17483e2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2-修改容器内容的方法"><a href="#3-2-修改容器内容的方法" class="headerlink" title="3.2 修改容器内容的方法"></a>3.2 修改容器内容的方法</h2><blockquote>
+<p>修改容器主要有两种，第一种是使用vim来直接修改容器内的文件，第二种是通过复制到本地，修改后再传入容器，实现文件的更新。</p>
+</blockquote>
+<h3 id="3-2-1-VIM方法"><a href="#3-2-1-VIM方法" class="headerlink" title="3.2.1 VIM方法"></a>3.2.1 VIM方法</h3><p>有一些Docker中没有vim，如果有的话可以按如下方法修改文件。</p>
+<p>首先进入容器，然后<code>cd</code>到需要修改文件的文件夹后输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vi ppo_lstm.py</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>vi</code>的基本操作分为三个，进入后按 **<kbd>A</kbd><strong>开启编辑模式，按</strong><kbd>ESC</kbd><strong>退出编辑模式，输入</strong><kbd>:wq</kbd>**保存并退出。</p>
 </li>
-<li><p>这意味着在n很大的情况下，$C_x∈R^{(n×n)}$ ，协方差矩阵太大并且不可逆很难分解</p>
-</li>
-<li><p>因此要采用预处理降维度的办法</p>
+<li><p>进入编辑模式后通过上下左右移动光标，退出时候强制退出不保存的话，输入**<kbd>:q!</kbd>**即可</p>
 </li>
 </ul>
-<p>$$<br>𝒘<em>1=𝒙_1, 𝒘_1=𝒘_1/‖𝒘_1 ‖\<br>𝒘_2=𝒙_2−(𝒘_1^𝑇 𝒙_2)𝒘_1,𝒘_2=𝒘_2/‖𝒘_2 ‖\<br>                        ……\<br>𝒘_𝑘=𝒙_𝑘−∑</em>{(𝑗=1)}^{(𝑘−1)}(𝒘_𝑗^𝑇 𝒙_𝑘)𝒘_𝑗 , 𝒘_𝑘=𝒘_𝑘/‖𝒘_𝑘 ‖<br>$$</p>
+<blockquote>
+<p>**<kbd>:</kbd><strong>是进入到命令模式，在该模式下输入</strong><kbd>wq</kbd><strong>然后</strong><kbd>Enter</kbd>**保存。</p>
+</blockquote>
+<h3 id="3-2-2-CP方法"><a href="#3-2-2-CP方法" class="headerlink" title="3.2.2 CP方法"></a>3.2.2 CP方法</h3><blockquote>
+<p>注意修改后的文件夹名称应该<strong>相同</strong>，这样直接覆盖掉原来的文件夹。如果名称不同的话，就是一般情况的复制一个新文件夹过来。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker cp daf8c17483e23:/home/carla /home/shy/Desktop/carla</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker cp /home/shy/Desktop/carla daf8c17483e2:/home</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-更新容器到镜像"><a href="#3-3-更新容器到镜像" class="headerlink" title="3.3 更新容器到镜像"></a>3.3 更新容器到镜像</h2><blockquote>
+<p>容器内的内容修改后，可以直接运行某些程序，并且如果不删除该容器的话，下次仅需要开启<strong>START</strong>这个容器并进入<strong>EXEC</strong>就可以了。但如果能保存成镜像文件，这个就变成了一个修改好的镜像文件，可以供其他人继续使用。</p>
+</blockquote>
+<h3 id="3-3-1-本地镜像"><a href="#3-3-1-本地镜像" class="headerlink" title="3.3.1 本地镜像"></a>3.3.1 本地镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker commit 1142d7e8c313 carlasim/carla:0.9.9.2</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker commit -m<span class="string">&quot;carla 0.9.9.2 version &quot;</span> -a=<span class="string">&quot;Shy&quot;</span> 1142d7e8c313 carlasim/carla:0.9.9.2</span></span><br></pre></td></tr></table></figure>
+
+<p>即将修改好的容器ID为<code>1142d7e8c313</code>的东西更新到<code>carlasim/carla</code>下，并设置<strong>TAG</strong>为<code>0.9.9.2</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker images</span></span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">carlasim/carla      0.9.9.2             e33fe3c64c00        28 seconds ago      21.1GB</span><br><span class="line">air                 cpu_r.1             047dc00744a3        15 months ago       2.59GB</span><br><span class="line">nvidia/cuda         9.0-base            3c57055e68a2        16 months ago       140MB</span><br><span class="line">deepdrive/spc       latest              8a5399f1ba56        20 months ago       29GB</span><br><span class="line">carlasim/carla      0.9.6               daf8c17483e2        21 months ago       6.7GB</span><br><span class="line">carlasim/carla      0.9.5               130f9443c473        2 years ago         7.95GB</span><br><span class="line">carlasim/carla      0.8.4               35e5046c8e16        2 years ago         10.4GB</span><br></pre></td></tr></table></figure>
+
+<p>这样生成了一个新的镜像，并且生成了新的镜像ID。</p>
+<blockquote>
+<p>这就回到了第三章开头部分，一个镜像文件的两种身份，一个是镜像ID，另一个是仓库:版本号</p>
+</blockquote>
+<h3 id="3-3-2-阿里云镜像"><a href="#3-3-2-阿里云镜像" class="headerlink" title="3.3.2 阿里云镜像"></a>3.3.2 阿里云镜像</h3><p>在生成了修改后的本地镜像，下一步是将本地镜像上传到阿里云仓库中。</p>
+<p>那么首先应该建立一个<code>本地仓库</code>，<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instance/repositories">https://cr.console.aliyun.com/cn-hangzhou/instance/repositories</a></p>
+<p>然后点击<code>管理</code>，可以看到提交到该仓库的方法，代码大概长这样</p>
+<p>主要分为以下几个步骤：</p>
+<ul>
+<li>登陆阿里云</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker login --username=shy registry.cn-hangzhou.aliyuncs.com</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里注意一下，一共有两个密码，首先输入的是服务器的密码，然后才是阿里云仓库的密码</p>
+</blockquote>
+<ul>
+<li>从自己仓库拉取镜像</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker pull registry.cn-hangzhou.aliyuncs.com/shy/carla:0.9.9.2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>将镜像推送到仓库</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker login --username=shy registry.cn-hangzhou.aliyuncs.com</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker tag e33fe3c64c00 registry.cn-hangzhou.aliyuncs.com/shy/carla:0.9.9.2</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker push registry.cn-hangzhou.aliyuncs.com/shy/carla:0.9.9.2</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>docker tag</strong>命令是将本地镜像命名为<strong>registry.cn-hangzhou.aliyuncs.com/shy/carla</strong>，这样可以和阿里云仓库对应上</p>
+<p><strong>docker push</strong>命令是将该镜像推送至远程仓库</p>
+</blockquote>
+<h1 id="四、Docker-构建镜像"><a href="#四、Docker-构建镜像" class="headerlink" title="四、Docker 构建镜像"></a>四、Docker 构建镜像</h1><blockquote>
+<p>构建镜像的过程比较复杂，这里仅仅通过配置好的文件，如具有<strong>Dockerfile</strong>等文件，直接建立镜像文件</p>
+</blockquote>
+<h2 id="4-1-以Carla为例构建镜像"><a href="#4-1-以Carla为例构建镜像" class="headerlink" title="4.1 以Carla为例构建镜像"></a>4.1 以Carla为例构建镜像</h2><blockquote>
+<p>carla的docker文件只有一些大版本更新，如果想使用小版本的docker的话可以通过已有的文件来构建。</p>
+</blockquote>
+<p>可以构建<strong>任意版本</strong>的文件，比如你在官网下载了任意版本的carlaXXX.tar.gz，然后使用<code>tar -zxvf</code>方式解压，可以看到里面的<code>dockerfile</code>文件，那么直接构建即可。</p>
+<p>首先切换到该<code>dockfile</code>路径，然后<code>build</code>即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker build -t carlasim/carla:0.9.9.2 .</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">xx@amax2080-3:/home/shy/Desktop/carla$ docker build -t carlasim/carla:0.9.9.2 .</span><br><span class="line">Sending build context to Docker daemon  7.213GB</span><br><span class="line">Step 1/8 : FROM nvidia/vulkan:1.1.121-cuda-10.1-alpha</span><br><span class="line">1.1.121-cuda-10.1-alpha: Pulling from nvidia/vulkan</span><br><span class="line">Step 2/8 : RUN packages=&#x27;libsdl2-2.0&#x27; 	&amp;&amp; apt-get update &amp;&amp; apt-get install -y $packages --no-install-recommends 	&amp;&amp; rm -rf /var/lib/apt/lists/*</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> 52cac4867718</span></span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> 1b66ac26486f</span></span><br><span class="line">Step 3/8 : RUN useradd -m carla</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> db6f21c64632</span></span><br><span class="line">Removing intermediate container db6f21c64632</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> 607bdd5426f7</span></span><br><span class="line">Step 4/8 : COPY --chown=carla:carla . /home/carla</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> 8e368c286a3d</span></span><br><span class="line">Step 5/8 : USER carla</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> 609d1a367c2c</span></span><br><span class="line">Removing intermediate container 609d1a367c2c</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> dacd2071adb2</span></span><br><span class="line">Step 6/8 : WORKDIR /home/carla</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> 0ea3e203b324</span></span><br><span class="line">Removing intermediate container 0ea3e203b324</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> a4999881469b</span></span><br><span class="line">Step 7/8 : ENV SDL_VIDEODRIVER=offscreen</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> 9153b9cc182f</span></span><br><span class="line">Removing intermediate container 9153b9cc182f</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> f1ef8394e391</span></span><br><span class="line">Step 8/8 : CMD /bin/bash CarlaUE4.sh</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> Running <span class="keyword">in</span> a2c7f1995bdb</span></span><br><span class="line">Removing intermediate container a2c7f1995bdb</span><br><span class="line"><span class="meta"> ---&gt;</span><span class="bash"> f66e30bfa2b0</span></span><br><span class="line">Successfully built f66e30bfa2b0</span><br><span class="line">Successfully tagged carlasim/carla:0.9.9.2shel</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、Docker-删除镜像"><a href="#五、Docker-删除镜像" class="headerlink" title="五、Docker 删除镜像"></a>五、Docker 删除镜像</h1><blockquote>
+<p>Docker删除镜像时候会遇到各种麻烦，主要是因为容器还在，很难删除该镜像</p>
+</blockquote>
+<h2 id="5-1-删除容器"><a href="#5-1-删除容器" class="headerlink" title="5.1 删除容器"></a>5.1 删除容器</h2><p>首先应该查看有哪些<code>镜像</code>和<code>容器</code>，顺序是先删除对应镜像中的容器，然后再删除镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker images</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker ps -a</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker rm -f containerID</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-2-删除镜像"><a href="#5-2-删除镜像" class="headerlink" title="5.2 删除镜像"></a>5.2 删除镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo docker rmi imageID</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="六、Docker-运行Carla"><a href="#六、Docker-运行Carla" class="headerlink" title="六、Docker 运行Carla"></a>六、Docker 运行Carla</h1><blockquote>
+<p>Docker运行carla，主要需要两个终端，一个终端用于运行carla，另一个终端用于运行python文件</p>
+</blockquote>
+<h2 id="6-1-运行carla终端"><a href="#6-1-运行carla终端" class="headerlink" title="6.1 运行carla终端"></a>6.1 运行carla终端</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -p 2080-2082:2080-2082 --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=2 f66e30bfa2b0 ./CarlaUE4.sh -carla-port=2080</span> </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-p 设置端口，连续的三个即可，注意不要和已运行的端口冲突</p>
+<p>-e 设置选择哪个显卡运行carla</p>
+<p>选择存储carla的对应镜像ID</p>
+<p>最后设置carla的端口</p>
+</blockquote>
+<h2 id="6-2-运行python文件"><a href="#6-2-运行python文件" class="headerlink" title="6.2 运行python文件"></a>6.2 运行python文件</h2><ul>
+<li>测试程序(运行训练好的模型，只能在本地图形化系统里运行)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 run.py --agent_id=1 --env=CarlaGymEnv-v1 --<span class="built_in">test</span> -p 2080</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在运行python文件的时候，也要根据这个文件里的设置，设置对应的端口来通讯，如此时选择2080端口。</p>
+</blockquote>
+<ul>
+<li>训练程序</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> python3 run.py --cfg_file=tools/cfgs/config.yaml --agent_id=1 --env=CarlaGymEnv-v1 -p 2080</span></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -580,7 +729,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://SunHaoOne.github.io/2021/03/21/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/">https://SunHaoOne.github.io/2021/03/21/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/</a>
+                    <a href="https://SunHaoOne.github.io/2021/04/15/Docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">https://SunHaoOne.github.io/2021/04/15/Docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -795,9 +944,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/15/Docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
@@ -814,9 +964,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -829,6 +979,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -851,18 +1002,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/21/Apply%20DQN%20%20in%20gym%20environment%20in%20gym%5BMountainCar-v0%5D/">
+                <a href="/2021/03/21/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="Apply DQN  in gym environment in [MountainCar-v0]">
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="PCA特征值分解的两种推导">
                         
-                        <span class="card-title">Apply DQN  in gym environment in [MountainCar-v0]</span>
+                        <span class="card-title">PCA特征值分解的两种推导</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            传统的方法是通过确定的状态来更新Q-value，本实验将不同的`图片帧`作为状态，通过卷积神经网络输出一个Q-value，进一步再选择动作
+                            一种推导方式是通过方差最大化，另一种是通过距离最小化
                         
                     </div>
                     <div class="publish-info">
